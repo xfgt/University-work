@@ -37,7 +37,7 @@ void selectionSort(int* a, const size_t sz){
 
 void bubbleSort(int* a, const size_t sz){
     bool flag = 0;
-    for(size_t k = 1; k < sz-1; k++){
+    for(size_t k = 0; k < sz-1; k++){
         flag = 0;
 
         for(size_t i = 0; i < sz-k-1; i++){
@@ -54,20 +54,20 @@ void bubbleSort(int* a, const size_t sz){
 }
 
 
-void insertionSort(int* a, const size_t sz){ // FIX
-    int temp{}, hole{};
-    for(size_t i = 1; i < sz -1; i++){
-        temp = a[i];
-        hole = i-1;
+void insertionSort(int* arr, const size_t n){
+    for (int i = 1; i < n; ++i) {
+        int key = arr[i];
+        int j = i - 1;
 
-        while(hole>=0 && a[hole] > temp){
-
-            a[hole+1] = a[hole];
-            hole = hole-1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
         }
-        a[hole] = temp;
+        arr[j + 1] = key;
     }
 }
+
+
 
 
 int main()
@@ -91,8 +91,9 @@ for(size_t x = 10000; x <= 100000; x+=10000){
 
     //selectionSort(A, sz);
     //bubbleSort(A, sz);
-
     insertionSort(A, sz);
+
+
 
 
 
