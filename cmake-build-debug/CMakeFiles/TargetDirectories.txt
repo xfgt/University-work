@@ -1,0 +1,3 @@
+D:/Documents/Personel/University/entry/cmake-build-debug/CMakeFiles/entry.dir
+D:/Documents/Personel/University/entry/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/Personel/University/entry/cmake-build-debug/CMakeFiles/rebuild_cache.dir
