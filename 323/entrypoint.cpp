@@ -6,7 +6,7 @@
 
 // algorithms
 
-#include "algorithms.h"
+#include "D:\Documents\Personel\University\entry\323\AlgorithmsDir\algorithms.h"
 
 
 
@@ -30,9 +30,10 @@ int main(){
 		for(int i = 0; i < x; i++) A[i] = rand() % 100 + 1;
 		std::cout << x << std::endl;
 		startTimer();
-//		selectionSort(A, x);
-//		insertionSort(A,x);
-//		bubbleSort(A,x);
+
+        // put algorithm here.
+		quickSort(A, 0, x);
+
 		stopTimer();
 
 		//printArr(A, x);
