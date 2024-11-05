@@ -4,10 +4,6 @@ project(entry)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(entry
-        323/3/asdf.cpp
-        323/AlgorithmsDir/functions/swap.cpp
-        323/AlgorithmsDir/functions/print.cpp
-
 
 
 )

@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <time.h>
 unsigned cnt;
 unsigned result;
 

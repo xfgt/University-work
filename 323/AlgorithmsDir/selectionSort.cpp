@@ -1,5 +1,5 @@
 #include "algorithms.h"
-void selectionSort(int* a, unsigned n){
+void selectionSort(int* a, int n){
 	for(int i = 0; i < n-1; ++i){
         //find min
 		int cmin = i;

@@ -2,13 +2,14 @@
 
 
 void quickSort(int* A, int li, int di) {
-    printf("\n---> lyavo: %d, dyasno: %d\n", li, di);
+   //printf("\n---> lyavo: %d, dyasno: %d\n", li, di);
 
     if(li > di) {
-        std::cout << "\n\t==== DUNO! ====\n\n";
+       // std::cout << "\n\t==== DUNO! ====\n\n";
     } else {
-        int Etalon = A[(li+di) / 2];
-        printf("\tEtalon = %d\n", Etalon);
+        // int Etalon = A[(li+di) / 2];
+        int Etalon = A[li];
+        //printf("\tEtalon = %d\n", Etalon);
 
         int j = li;
         int k = di;
