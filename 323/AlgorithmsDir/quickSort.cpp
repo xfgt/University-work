@@ -2,6 +2,7 @@
 
 
 void quickSort(int* A, int li, int di) {
+
    //printf("\n---> lyavo: %d, dyasno: %d\n", li, di);
 
     if(li > di) {

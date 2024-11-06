@@ -10,51 +10,46 @@
 #include "D:/Documents/Personel/University/entry/323/AlgorithmsDir/algorithms.h"
 
 
-
 // arr on heap
-const unsigned GSIZE = 2000;
+const unsigned GSIZE = 200000;
 unsigned sTime;
 
 void startTimer() { sTime = clock(); }
-void stopTimer() { std::cout << std::setprecision(7) << (float)(clock() - sTime) / CLOCKS_PER_SEC << "\n"; }
-
-void printArr(int* a, const unsigned sz){
-	for(int i = 0; i < sz; i++)
-		std::cout << a[i] << ' ';
-}
+void stopTimer() { std::cout << std::setprecision(7) << (float)(clock() - sTime) / CLOCKS_PER_SEC << "\t"; }
 
 int main(){
 	srand(time(NULL));
 
-	for(int x = GSIZE; x <= GSIZE * 5; x += 1000){ // getting more samples
+	for(int x = 1000; x <= GSIZE ; x+= 1000) {
+		// getting more samples
 		int* A = new int[x];
 		int* B = new int[x];
-//		for(int i = 0; i < x; i++){
-//                 A[i] = rand() % 100 + 1;
-//                 B[i] = A[i];
-//       }
 		for(int i = 0; i < x; i++){
-			A[i] = i;
-			B[i] = i;
+			A[i] = rand() % 100 + 1;
+			B[i] = A[i];
 		}
 		std::cout << x << std::endl;
+		// printarr(A, x);
+		// printarr(B, x);
+		//std::cout << "QuickSort\t";
+		// startTimer();
+		// quickSort(A, 0, x);
+		// stopTimer();
 
-		std::cout << "quick" << std::endl;
+		// std::cout << "MergeSort\t";
 		startTimer();
-		quickSort(A, 0, x);
+		mergeSort(B, 0, x);
 		stopTimer();
 
+		// printarr(A, x);
+		// printarr(B, x);
+		 //system("pause");
 
-		std::cout << "selection" << std::endl;
-		startTimer();
-		selectionSort(B, x);
-		stopTimer();
 
-		// printArr(A, x);
-		// printArr(B, x);
 		delete[] A;
 		delete[] B;
 	}
+
 	return 0;
 }
 
