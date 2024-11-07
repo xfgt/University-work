@@ -73,11 +73,11 @@ build CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj: CXX_COMPILER__en
   OBJECT_DIR = CMakeFiles\entry.dir
   OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\AlgorithmsDir
 
-build CMakeFiles/entry.dir/323/entrypoint.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/entrypoint.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\entrypoint.cpp.obj.d
+build CMakeFiles/entry.dir/323/5/hw1.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/5/hw1.cpp || cmake_object_order_depends_target_entry
+  DEP_FILE = CMakeFiles\entry.dir\323\5\hw1.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323
+  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\5
 
 
 # =============================================================================
@@ -87,7 +87,7 @@ build CMakeFiles/entry.dir/323/entrypoint.cpp.obj: CXX_COMPILER__entry_unscanned
 #############################################
 # Link the executable entry.exe
 
-build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj CMakeFiles/entry.dir/323/entrypoint.cpp.obj
+build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj CMakeFiles/entry.dir/323/5/hw1.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\entry.dir

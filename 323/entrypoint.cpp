@@ -29,18 +29,23 @@ int main(){
 			B[i] = A[i];
 		}
 		std::cout << x << std::endl;
+// Print arrays
 		// printarr(A, x);
 		// printarr(B, x);
-		//std::cout << "QuickSort\t";
-		// startTimer();
-		// quickSort(A, 0, x);
-		// stopTimer();
 
-		// std::cout << "MergeSort\t";
+// Algorithms
+		//std::cout << "QuickSort\t";
 		startTimer();
-		mergeSort(B, 0, x);
+		quickSort(A, 0, x);
 		stopTimer();
 
+		// std::cout << "MergeSort\t";
+		// startTimer();
+		// mergeSort(B, 0, x);
+		// stopTimer();
+
+
+// Print arrays [sorted]
 		// printarr(A, x);
 		// printarr(B, x);
 		 //system("pause");

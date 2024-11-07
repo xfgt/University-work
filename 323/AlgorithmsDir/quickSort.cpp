@@ -1,15 +1,15 @@
 #include "algorithms.h"
-
+static int cnt{};
 
 void quickSort(int* A, int li, int di) {
-
+    cnt++;
    //printf("\n---> lyavo: %d, dyasno: %d\n", li, di);
 
     if(li > di) {
-       // std::cout << "\n\t==== DUNO! ====\n\n";
+       //std::cout << "\n\t==== DUNO! ====\n\n";
     } else {
-        // int Etalon = A[(li+di) / 2];
-        int Etalon = A[li];
+        int Etalon = A[(li+di) / 2];
+        //int Etalon = A[li];
         //printf("\tEtalon = %d\n", Etalon);
 
         int j = li;
@@ -21,6 +21,7 @@ void quickSort(int* A, int li, int di) {
 
             if(j <= k) {
                 //printf("Razmyana na %d i %d\n", A[j], A[k]);
+                //printarr(A, k);
                 swap(A[j], A[k]);
                 j++; k--;
             }
@@ -31,6 +32,7 @@ void quickSort(int* A, int li, int di) {
 
         //printf("Izpluvane.\nPotuvane nadqsno.");
         quickSort(A, j, di);
+        std::cout << cnt << std::endl;
     }
 }
 
