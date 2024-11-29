@@ -52,11 +52,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2,
-				3,
-				4
+				0
 			]
 		}
 	],
@@ -93,11 +89,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2,
-				3,
-				4
+				0
 			]
 		}
 	],
@@ -106,31 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "323/AlgorithmsDir/functions/print.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "323/AlgorithmsDir/functions/swap.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "323/AlgorithmsDir/mergeSort.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "323/AlgorithmsDir/quickSort.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "323/5/hw1.cpp",
+			"path" : "323/7/pointers.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -49,35 +49,11 @@ cmake_ninja_workdir = D$:/Documents/Personel/University/entry/cmake-build-debug/
 
 build cmake_object_order_depends_target_entry: phony || .
 
-build CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/AlgorithmsDir/functions/print.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\AlgorithmsDir\functions\print.cpp.obj.d
+build CMakeFiles/entry.dir/323/7/pointers.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/7/pointers.cpp || cmake_object_order_depends_target_entry
+  DEP_FILE = CMakeFiles\entry.dir\323\7\pointers.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\AlgorithmsDir\functions
-
-build CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/AlgorithmsDir/functions/swap.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\AlgorithmsDir\functions\swap.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\AlgorithmsDir\functions
-
-build CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/AlgorithmsDir/mergeSort.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\AlgorithmsDir\mergeSort.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\AlgorithmsDir
-
-build CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/AlgorithmsDir/quickSort.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\AlgorithmsDir\quickSort.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\AlgorithmsDir
-
-build CMakeFiles/entry.dir/323/5/hw1.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/5/hw1.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\5\hw1.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\5
+  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\7
 
 
 # =============================================================================
@@ -87,7 +63,7 @@ build CMakeFiles/entry.dir/323/5/hw1.cpp.obj: CXX_COMPILER__entry_unscanned_Debu
 #############################################
 # Link the executable entry.exe
 
-build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj CMakeFiles/entry.dir/323/5/hw1.cpp.obj
+build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/7/pointers.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\entry.dir
@@ -102,7 +78,7 @@ build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/Alg
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Documents\Personel\University\entry\cmake-build-debug && "E:\Programs\CLion\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Documents\Personel\University\entry\cmake-build-debug && "D:\Programs\fromWindows_D\CLion\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -113,7 +89,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Documents\Personel\University\entry\cmake-build-debug && "E:\Programs\CLion\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Documents\Personel\University\entry -BD:\Documents\Personel\University\entry\cmake-build-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Documents\Personel\University\entry\cmake-build-debug && "D:\Programs\fromWindows_D\CLion\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Documents\Personel\University\entry -BD:\Documents\Personel\University\entry\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -142,14 +118,14 @@ build all: phony entry.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Documents/Personel/University/entry/CMakeLists.txt E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Documents/Personel/University/entry/CMakeLists.txt D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Documents/Personel/University/entry/CMakeLists.txt E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake E$:/Programs/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
+build CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake D$:/Documents/Personel/University/entry/CMakeLists.txt D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake D$:/Programs/fromWindows_D/CLion/CLion$ 2024.2.2/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################
