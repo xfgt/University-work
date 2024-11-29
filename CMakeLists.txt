@@ -17,7 +17,10 @@ add_executable(entry
         #323/entrypoint.cpp
         #323/5/hw1.cpp
         #323/6/hanoi.cpp
-        323/7/pointers.cpp
+        #323/7/pointers.cpp
+        #324/PC/poredici.cpp
+        #324/PC/largestVal.cpp
+        324/PC/1/triaglesOnPlate.cpp
 
 
 )
