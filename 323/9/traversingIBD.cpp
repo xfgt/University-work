@@ -32,10 +32,10 @@ int main() {
     printf("Prefix\n");
     Preorder_prefix_NLR(root);
 
-    printf("Infix\n");
+    printf("\nInfix\n");
     Inorder_infix_LNR(root);
 
-    printf("Postfix\n");
+    printf("\nPostfix\n");
     Postorder_postfix_LRN(root);
 }
 
@@ -63,24 +63,31 @@ po ibd(int n) {
 
 void Preorder_prefix_NLR(po help) {
     if(help) {
-        std::cout << help->data << std::endl;
+        std::cout << help->data;
         Inorder_infix_LNR(help->left);
         Inorder_infix_LNR(help->right);
     }
+
 }
 void Inorder_infix_LNR(po help) {
+
     if(help) {
+        std::cout << "(";
         Inorder_infix_LNR(help->left);
-        std::cout << help->data << std::endl;
+        std::cout << help->data;
         Inorder_infix_LNR(help->right);
+        std::cout << ")";
     }
+
+
 }
 void Postorder_postfix_LRN(po help) {
     if(help) {
         Inorder_infix_LNR(help->left);
         Inorder_infix_LNR(help->right);
-        std::cout << help->data << std::endl;
+        std::cout << help->data;
     }
+
 }
 
 
