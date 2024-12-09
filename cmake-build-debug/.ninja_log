@@ -1,10 +1,10 @@
 # ninja log v6
-8	243	7554482841591292	build.ninja	f2c9304bf4694efe
+8	243	7554485554118945	build.ninja	f2c9304bf4694efe
 445	510	7553671109783682	entry.exe	7bac3e6366b6fcd9
+21	857	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj	faf03144f64e24cb
+30	884	7542517371394600	CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj	3803a1105ce7b07d
 12	474	7552961644436007	CMakeFiles/entry.dir/323/8/sla.cpp.obj	9c495816baa5de0a
 15	491	7550249346785673	CMakeFiles/entry.dir/323/7/pointers.cpp.obj	ea273e29b20337f3
-30	884	7542517371394600	CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj	3803a1105ce7b07d
-21	857	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj	faf03144f64e24cb
 16	865	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj	b222bff458c7eea1
 25	900	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj	c66d427b22301e62
 35	986	7542517371455106	CMakeFiles/entry.dir/323/6/hanoi.cpp.obj	8cb7258e44d01151
@@ -14,3 +14,6 @@
 11	610	7546586003982354	CMakeFiles/entry.dir/324/PC/3.cpp.obj	569f95697d9bb24a
 14	706	7546588573943889	CMakeFiles/entry.dir/324/PC/4.cpp.obj	6efa3fe20e35ba35
 4	445	7553671105372516	CMakeFiles/entry.dir/323/8/LListSimpleImplementation.cpp.obj	8cde19a67e9fa2f7
+1	231	7554485554118945	build.ninja	f2c9304bf4694efe
+27	851	7554485554976291	CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj	e58c45994347f9dd
+853	1624	7554485563240591	entry.exe	5ce18a09939ef2a5

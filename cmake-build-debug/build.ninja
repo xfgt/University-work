@@ -49,12 +49,6 @@ cmake_ninja_workdir = D$:/Documents/Personel/University/entry/cmake-build-debug/
 
 build cmake_object_order_depends_target_entry: phony || .
 
-build CMakeFiles/entry.dir/323/9/IBD.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/9/IBD.cpp || cmake_object_order_depends_target_entry
-  DEP_FILE = CMakeFiles\entry.dir\323\9\IBD.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\entry.dir
-  OBJECT_FILE_DIR = CMakeFiles\entry.dir\323\9
-
 build CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj: CXX_COMPILER__entry_unscanned_Debug D$:/Documents/Personel/University/entry/323/9/traversingIBD.cpp || cmake_object_order_depends_target_entry
   DEP_FILE = CMakeFiles\entry.dir\323\9\traversingIBD.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -69,7 +63,7 @@ build CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj: CXX_COMPILER__entry_unsc
 #############################################
 # Link the executable entry.exe
 
-build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/9/IBD.cpp.obj CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj
+build entry.exe: CXX_EXECUTABLE_LINKER__entry_Debug CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\entry.dir
