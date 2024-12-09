@@ -5,8 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(entry
 
-        #323/9/IBD.cpp
-        323/9/traversingIBD.cpp
+
 
 
         #       fucntions
@@ -24,6 +23,8 @@ add_executable(entry
         #323/7/StackSimpleImplementation.cpp
         #323/8/LListSimpleImplementation.cpp
         #323/8/sla.cpp
+        #323/9/IBD.cpp
+        323/9/traversingIBD.cpp
 
 
 )
