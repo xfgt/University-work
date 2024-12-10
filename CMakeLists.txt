@@ -8,7 +8,7 @@ add_executable(entry
 
 
 
-        #       fucntions
+#       fucntions
         #323/AlgorithmsDir/functions/print.cpp
         #323/AlgorithmsDir/functions/swap.cpp
 
@@ -24,7 +24,9 @@ add_executable(entry
         #323/8/LListSimpleImplementation.cpp
         #323/8/sla.cpp
         #323/9/IBD.cpp
-        323/9/traversingIBD.cpp
+        323/9/IdealyBalancedTree.cpp
+        323/9/traversal.cpp
+        323/9/traversal.h
 
 
 )

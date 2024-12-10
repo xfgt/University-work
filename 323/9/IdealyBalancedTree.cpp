@@ -1,15 +1,14 @@
 //
 // Created by MRSLAVE on 09-Dec-24.
 //
-#include <iostream>
-typedef int DataT;
-typedef struct node* po;
+//
+// Created by MRSLAVE on 09-Dec-24.
+//
 
-struct node {
-    DataT data;
-    po left;
-    po right;
-};
+#include <iostream>
+#include "traversal.h"
+
+
 
 po ibd(int n) {
     po darj;
@@ -36,4 +35,16 @@ int main() {
     int n; po root;
     std::cin >> n;
     root = ibd(n);
+    print(root, 1);
+
+    printf("Prefix\n");
+    Preorder_prefix_NLR(root);
+
+    printf("\nInfix\n");
+    Inorder_infix_LNR(root);
+
+    printf("\nPostfix\n");
+    Postorder_postfix_LRN(root);
 }
+
+
