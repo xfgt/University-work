@@ -8,7 +8,7 @@
 
 void Preorder_prefix_NLR(po help) {
     if(help) {
-        std::cout << help->data;
+        std::cout << help->data << " ";
         Inorder_infix_LNR(help->left);
         Inorder_infix_LNR(help->right);
     }
@@ -17,11 +17,11 @@ void Preorder_prefix_NLR(po help) {
 void Inorder_infix_LNR(po help) {
 
     if(help) {
-        std::cout << "(";
+
         Inorder_infix_LNR(help->left);
-        std::cout << help->data;
+        std::cout << help->data << " ";
         Inorder_infix_LNR(help->right);
-        std::cout << ")";
+
     }
 
 
@@ -30,7 +30,7 @@ void Postorder_postfix_LRN(po help) {
     if(help) {
         Inorder_infix_LNR(help->left);
         Inorder_infix_LNR(help->right);
-        std::cout << help->data;
+        std::cout << help->data << " ";
     }
 
 }

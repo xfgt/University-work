@@ -8,7 +8,7 @@
 #include <iostream>
 #include "traversal.h"
 
-
+int n{};
 
 po ibd(int n) {
     po darj;
@@ -19,20 +19,23 @@ po ibd(int n) {
         int nl = n / 2;
         int nd = n - nl - 1;
         darj = new node;
-        std::cin >> x; darj->data = x;
-        // !
+        // normal
+        // std::cin >> x;
+        // darj->data = x;
         darj->left = ibd(nl);
+        // input ascending order infix traversal
+        std::cin >> x;
+        darj->data = x;
         darj->right= ibd(nd);
-        return darj;
-    } else {
-        return nullptr;
-    }
 
+        return darj;
+    } else return nullptr;
 
 }
 
+
 int main() {
-    int n; po root;
+    po root;
     std::cin >> n;
     root = ibd(n);
     print(root, 1);
@@ -45,6 +48,9 @@ int main() {
 
     printf("\nPostfix\n");
     Postorder_postfix_LRN(root);
+
+
+
 }
 
 
