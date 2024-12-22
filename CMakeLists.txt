@@ -16,18 +16,12 @@ add_executable(entry
         #323/AlgorithmsDir/quickSort.cpp
 
 #       executing points
-        #323/entrypoint.cpp
-        #323/5/hw1.cpp
-        #323/6/hanoi.cpp
-        #323/7/StackSimpleImplementation.cpp
-        #323/8/LListSimpleImplementation.cpp
-        #323/8/sla.cpp
-        #323/9/IBD.cpp
-        #323/9/IdealyBalancedTree.cpp
-        #323/9/traversal.cpp
-        #323/9/traversal.h
-        "misc/input and buffers/input.cpp"
+
+        323/9/IdealyBalancedTree.cpp
+        323/9/traversal.cpp
+        323/9/traversal.h
 
 
 
-)
+
+) # executable files

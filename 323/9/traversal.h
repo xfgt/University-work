@@ -4,7 +4,7 @@
 
 #pragma once
 
-typedef int DataT;
+typedef char DataT;
 typedef struct node* po;
 
 struct node {

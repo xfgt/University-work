@@ -19,14 +19,17 @@ po ibd(int n) {
         int nl = n / 2;
         int nd = n - nl - 1;
         darj = new node;
-        // normal
+    // normal
         // std::cin >> x;
         // darj->data = x;
+
         darj->left = ibd(nl);
-        // input ascending order infix traversal
+    // input increasing order infix traversal
         std::cin >> x;
         darj->data = x;
+
         darj->right= ibd(nd);
+
 
         return darj;
     } else return nullptr;

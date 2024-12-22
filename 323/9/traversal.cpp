@@ -17,11 +17,11 @@ void Preorder_prefix_NLR(po help) {
 void Inorder_infix_LNR(po help) {
 
     if(help) {
-
+    //  std::cout << '(';
         Inorder_infix_LNR(help->left);
         std::cout << help->data << " ";
         Inorder_infix_LNR(help->right);
-
+    //  std::cout << ')';
     }
 
 
