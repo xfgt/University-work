@@ -2,7 +2,7 @@
 // Created by MRSLAVE on 27-Dec-24.
 //
 #include <iostream>
-#include "operations.h"
+#include "_operations.h"
 struct node *newNode(int item) {
     struct node *temp = (struct node *) malloc(sizeof(struct node));
     temp->key = item;

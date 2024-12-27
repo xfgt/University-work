@@ -4,9 +4,9 @@ project(entry)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(entry
-        323/10/BST.cpp
-        323/10/operations.h
-        323/10/operations.cpp
+        323/10/_BST.cpp
+        323/10/_operations.h
+        323/10/_operations.cpp
 
 
 ) # executable files
