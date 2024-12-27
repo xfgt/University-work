@@ -22,8 +22,8 @@ int main() {
     std::cin >> SZ;
 
     struct node *root = createTree(SZ);
-
     print(root, 1);
+
     std::cout << "\nInorder traversal: ";
     inorder(root);
 

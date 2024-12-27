@@ -60,7 +60,7 @@ void inorder(struct node* root) {
     if(root == nullptr) return;
 
     inorder(root->left);
-    std::cout << root->key << " -> ";
+    std::cout << root->key << " ";
     inorder(root->right);
 }
 
