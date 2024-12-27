@@ -64,3 +64,19 @@ void inorder(struct node* root) {
     inorder(root->right);
 }
 
+int COUNT{};
+void print(struct node *root, int space)
+{
+    COUNT = 10;
+    if (root == nullptr) return;
+
+    space += COUNT;
+    print(root->right, space);
+
+    std::cout << std::endl;
+    for (int i = COUNT; i < space; i++)
+        std::cout << " ";
+    std::cout << root->key << "\n";
+
+    print(root->left, space);
+}

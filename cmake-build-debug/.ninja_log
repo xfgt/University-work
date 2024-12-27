@@ -1,10 +1,10 @@
 # ninja log v6
-16	261	7570107779427137	build.ninja	f2c9304bf4694efe
-487	552	7570106919672818	entry.exe	898c92f0238773f9
-21	857	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj	faf03144f64e24cb
-30	884	7542517371394600	CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj	3803a1105ce7b07d
+16	261	7570111159123620	build.ninja	f2c9304bf4694efe
+495	563	7570109523457135	entry.exe	56b27da08a540521
 12	474	7552961644436007	CMakeFiles/entry.dir/323/8/sla.cpp.obj	9c495816baa5de0a
 15	491	7550249346785673	CMakeFiles/entry.dir/323/7/pointers.cpp.obj	ea273e29b20337f3
+30	884	7542517371394600	CMakeFiles/entry.dir/323/AlgorithmsDir/quickSort.cpp.obj	3803a1105ce7b07d
+21	857	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/swap.cpp.obj	faf03144f64e24cb
 16	865	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/functions/print.cpp.obj	b222bff458c7eea1
 25	900	7542517371245250	CMakeFiles/entry.dir/323/AlgorithmsDir/mergeSort.cpp.obj	c66d427b22301e62
 35	986	7542517371455106	CMakeFiles/entry.dir/323/6/hanoi.cpp.obj	8cb7258e44d01151
@@ -15,13 +15,18 @@
 14	706	7546588573943889	CMakeFiles/entry.dir/324/PC/4.cpp.obj	6efa3fe20e35ba35
 4	445	7553671105372516	CMakeFiles/entry.dir/323/8/LListSimpleImplementation.cpp.obj	8cde19a67e9fa2f7
 23	502	7554633677457251	CMakeFiles/entry.dir/323/9/traversingIBD.cpp.obj	e58c45994347f9dd
-8	537	7570077316165633	CMakeFiles/entry.dir/323/9/traversal.cpp.obj	734f061323eb1d4c
 31	547	7554632984731336	CMakeFiles/entry.dir/323/9/teest.cpp.obj	bf373ff517f1d843
+8	537	7570077316165633	CMakeFiles/entry.dir/323/9/traversal.cpp.obj	734f061323eb1d4c
 21	449	7570077907247032	CMakeFiles/entry.dir/323/9/IdealyBalancedTree.cpp.obj	507fcd7ed9b36495
 17	546	7557157780300325	CMakeFiles/entry.dir/input.cpp.obj	a6093dcf1b7c37ab
 17	419	7557882782566704	CMakeFiles/entry.dir/misc/input_and_buffers/input.cpp.obj	a23edf968a1f18af
 18	828	7557680874429670	CMakeFiles/entry.dir/misc/input_and_buffers/std_basicIstream_sync.cpp.obj	8006a4f442719172
-19	486	7570106914988595	CMakeFiles/entry.dir/323/10/BST.cpp.obj	a3ef5f5c39ecced5
-21	424	7570109518712827	CMakeFiles/entry.dir/323/10/operations.cpp.obj	a21a5e06d0752c41
 17	495	7570109518682795	CMakeFiles/entry.dir/323/10/BST.cpp.obj	a3ef5f5c39ecced5
-495	563	7570109523457135	entry.exe	56b27da08a540521
+21	424	7570109518712827	CMakeFiles/entry.dir/323/10/operations.cpp.obj	a21a5e06d0752c41
+1	242	7570111159123620	build.ninja	f2c9304bf4694efe
+20	446	7570111159934357	CMakeFiles/entry.dir/323/10/_operations.cpp.obj	c576ce728729f8a5
+17	514	7570111159904324	CMakeFiles/entry.dir/323/10/_BST.cpp.obj	2ff4c296ece5c2fa
+514	581	7570111164878936	entry.exe	797a84edb7310dd0
+9	564	7570115869518361	CMakeFiles/entry.dir/323/10/_operations.cpp.obj	c576ce728729f8a5
+5	647	7570115869478318	CMakeFiles/entry.dir/323/10/_BST.cpp.obj	2ff4c296ece5c2fa
+647	756	7570115875904178	entry.exe	797a84edb7310dd0

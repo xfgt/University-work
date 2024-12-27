@@ -5,6 +5,7 @@
 #include <iostream>
 #include "_operations.h"
 
+
 struct node *createTree(int N) {
     struct node *root = nullptr;
     int x;
@@ -22,7 +23,8 @@ int main() {
 
     struct node *root = createTree(SZ);
 
-    std::cout << "Inorder traversal: ";
+    print(root, 1);
+    std::cout << "\nInorder traversal: ";
     inorder(root);
 
     return 0;

@@ -13,3 +13,4 @@ struct node *minValueNode(struct node*);
 struct node *insert(struct node*, int);
 struct node *deleteNode(struct node*, int);
 void inorder(struct node*);
+void print(struct node*, int);
