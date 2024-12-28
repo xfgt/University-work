@@ -19,7 +19,7 @@ po ibd(int n) {
         int nl = n / 2;
         int nd = n - nl - 1;
         darj = new node;
-    // normal
+    // normal (pre)
         std::cin >> x;
         darj->data = x;
 
