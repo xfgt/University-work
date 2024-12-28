@@ -32,7 +32,7 @@ int main(){
 	//
 	// std::cin >> from >> to >> help;
 
-	for(int x = 10; x <= 40; x+=5) {
+	for(int x = 10; x <= 30; x+=5) {
 		startTimer();
 		hanoi(x, 'A', 'B', 'C');
 		stopTimer();

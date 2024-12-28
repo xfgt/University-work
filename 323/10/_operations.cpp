@@ -10,14 +10,6 @@ struct node *newNode(int item) {
     return temp;
 }
 
-struct node *minValueNode(struct node *node) {
-    struct node* current = node;
-
-    while(current && current->left != nullptr)
-        current = current->left;
-
-    return current;
-}
 
 struct node *insert (struct node *node, int key) {
     if(node == nullptr) return newNode(key);
@@ -27,6 +19,18 @@ struct node *insert (struct node *node, int key) {
 
     return node;
 }
+
+
+struct node *minValueNode(struct node *node) {
+    struct node* current = node;
+
+    while(current && current->left != nullptr)
+        current = current->left;
+
+    return current;
+}
+
+
 
 struct node *deleteNode(struct node *root, int key) {
     if(root == nullptr) return root;
@@ -57,11 +61,18 @@ struct node *deleteNode(struct node *root, int key) {
 }
 
 void inorder(struct node* root) {
-    if(root == nullptr) return;
+    if(root == nullptr) {
+        std::cout << "STIGNAH DO DUNO!!"<< std::endl;
+        return;
+    }
 
+    std::cout << "<---slizam nalqvo ot [" << root->key << "]" << std::endl;
     inorder(root->left);
-    std::cout << root->key << " ";
+
+    std::cout << "PRINT: " << root->key << " \n";
+    std::cout << "slizam naDQSNO ---> ot [" << root->key << "]" << std::endl;
     inorder(root->right);
+    std::cout << "[NQMA NISHTO, VRUSHTAM NAGORE] ot [" << root->key << "]" <<  std::endl;
 }
 
 int COUNT{};
