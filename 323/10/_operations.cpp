@@ -3,19 +3,25 @@
 //
 #include <iostream>
 #include "_operations.h"
+
 struct node *newNode(int item) {
     struct node *temp = (struct node *) malloc(sizeof(struct node));
     temp->key = item;
     temp->left = temp->right = nullptr;
+    std::cout << "Making a new node!\t [" << &temp << "]\t[" << temp->key << "]" << std::endl;
     return temp;
 }
 
-
+int it{}; // dives in
 struct node *insert (struct node *node, int key) {
-    if(node == nullptr) return newNode(key);
+    if(node == nullptr) {
+        std::cout << "[" << &node << "]\t Empty!" <<  std::endl;
+        return newNode(key);
+    }
 
-    if(key < node->key)     node->left = insert(node->left, key);
-    else                    node->right = insert(node->right, key);
+    if(key < node->key)         node->left = insert(node->left, key);
+    else if(key > node->key)    node->right = insert(node->right, key);
+    else                        std::cout << "Item already exists!\t[" << key << "];\t iterations: " << ++it << std::endl;
 
     return node;
 }
@@ -29,8 +35,6 @@ struct node *minValueNode(struct node *node) {
 
     return current;
 }
-
-
 
 struct node *deleteNode(struct node *root, int key) {
     if(root == nullptr) return root;
@@ -62,17 +66,18 @@ struct node *deleteNode(struct node *root, int key) {
 
 void inorder(struct node* root) {
     if(root == nullptr) {
-        std::cout << "STIGNAH DO DUNO!!"<< std::endl;
+        // std::cout << "STIGNAH DO DUNO!!"<< std::endl;
         return;
     }
 
-    std::cout << "<---slizam nalqvo ot [" << root->key << "]" << std::endl;
+    // std::cout << "<---slizam nalqvo ot [" << root->key << "]" << std::endl;
     inorder(root->left);
 
-    std::cout << "PRINT: " << root->key << " \n";
-    std::cout << "slizam naDQSNO ---> ot [" << root->key << "]" << std::endl;
+    // std::cout << "PRINT: " << root->key << " \n";
+    std::cout<< root->key << " ";
+    // std::cout << "slizam naDQSNO ---> ot [" << root->key << "]" << std::endl;
     inorder(root->right);
-    std::cout << "[NQMA NISHTO, VRUSHTAM NAGORE] ot [" << root->key << "]" <<  std::endl;
+    // std::cout << "[NQMA NISHTO, VRUSHTAM NAGORE] ot [" << root->key << "]" <<  std::endl;
 }
 
 int COUNT{};

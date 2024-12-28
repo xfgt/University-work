@@ -4,7 +4,8 @@ project(entry)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(entry
-        323/10/b/calimera.cpp
+        323/9/IdealyBalancedTree.cpp
+        323/9/traversal.cpp
 
 
 ) # executable files
