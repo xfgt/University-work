@@ -29,8 +29,12 @@ int main() {
     std::cout << "\nInorder traversal: ";
     inorder(root);
 
-    searchInTree(3, root);
-    searchInTree(21, root);
+    root = deleteNode(root, 6);
+    root = deleteNode(root, 41);
+    root = deleteNode(root, 3);
+    root = deleteNode(root, 9);
+
+
 
     print(root, 1);
     std::cout << "\nInorder traversal: ";
