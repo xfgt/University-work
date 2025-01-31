@@ -7,20 +7,22 @@
 int main() {
 
     int r{}, x{};
-
     int n{};
-    std::cin >> n;
-    if(n < 2 || n > 1000) return -1;
+    while(std::cin >> n){
+        if(n < 2 || n > 1000) return -1;
 
-    while(n--) {
-        int a, b;
-        std::cin >> a >> b;
-        if (a < 0 || b > 1000) return -1;
-        r -= a;
-        r += b;
-        if(r > x)
-            x = r;
+        while(n--) {
+            int a, b;
+            std::cin >> a >> b;
+            if (a < 0 || b > 1000) return -1;
+            r -= a;
+            r += b;
+            if(r > x)
+                x = r;
+        }
+
+        std::cout << x << '\n';
     }
-    std::cout << x << '\n';
+
     return 0;
 }
