@@ -1,4 +1,4 @@
-package sampleSolution1;
+package _sampleTestSolution1;
 
 public class welcomePrint {
     public static void main(String[] args) {

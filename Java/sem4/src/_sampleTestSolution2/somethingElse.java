@@ -1,4 +1,4 @@
-package sampleSolution2;
+package _sampleTestSolution2;
 
 import java.lang.Math;
 
