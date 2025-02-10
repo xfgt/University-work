@@ -7,13 +7,14 @@
 
 int main(){
 
-	Stoka s;
-	std::cin >> s;
-	std::cout << s << std::endl;
-
-	Stoka o("asdf", "eaafwdgew3242", 20.1, 34, 5,2);
-	std::cout << o << std::endl;
-
+	Stoka s[5];
+	for(int i = 0; i < 5; i++){
+		std::cin >> s[i];
+	}
+	// todo read form file
+	for(int i = 0; i < 5; i++){
+		std::cout << s[i] << std::endl;
+	}
 
 
 	return 0;

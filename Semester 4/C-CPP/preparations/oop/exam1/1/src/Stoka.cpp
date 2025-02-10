@@ -2,6 +2,7 @@
 #include "Stoka.h"
 #include <iostream>
 #include <cstring>
+#include <string.h>
 #include <cassert>
 
 Stoka::Stoka(
@@ -74,7 +75,7 @@ void Stoka::seth(int h) { _h = h; }
 
 
 std::istream& operator >> (std::istream& in, Stoka& obj){
-	 
+	
 	char* n = new char[20];
 	char* i = new char[20];
 
@@ -96,7 +97,7 @@ std::ostream& operator << (std::ostream& out, Stoka& obj) {
 	out << obj.getName() 	<< std::endl
 		<< obj.getId()		<< std::endl
 		<< obj.getww()		<< std::endl
-<< '[' << obj.getl() << ", " << obj.getw() << ", " << obj.geth() << ']' << std::endl;
+<< obj.getl() << " " << obj.getw() << " " << obj.geth() << std::endl;
 
 	return out;
 
