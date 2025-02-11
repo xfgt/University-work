@@ -9,19 +9,33 @@
 int main(){
  
  	Stoka s[5];
- 	for(int i = 0; i < 5; i++)
- 		std::cin >> s[i];
- 	
-
-	std::ofstream ofs;
-	ofs.open("output"); 
-	if(!ofs){
-		std::cout << "File wasn't created!"; return -1;
-	}
-
 	for(int i = 0; i < 5; i++)
-		ofs << s[i] << std::endl;
- 	
+		std::cin >> s[i];
+
+	std::fstream ofs("ofs", std::ios::out | std::ios::binary);
+	if(!ofs){
+		std::cout << "Error creating file!\n"; return 1;
+	}
+	ofs.write(reinterpret_cast<char*>(s), sizeof(Stoka));
+	ofs.close();
+
+
+
+
+	std::fstream ifs("ofs", std::ios::in | std::ios::binary);
+	if(!ifs){
+		std::cout << "Error opening file!\n"; return 1;
+	}
+	Stoka rs[5];
+
+	ifs.read(reinterpret_cast<char*>(rs), sizeof(Stoka));
+	ifs.close();
+	
+
+
+
+	for(Stoka& q : rs)
+		std::cout << q << std::endl;
  	
 	return 0;
 }

@@ -2,41 +2,15 @@
 #include "Stoka.h"
 #include <iostream>
 #include <cstring>
-#include <string.h>
-#include <cassert>
-
-Stoka::Stoka(
-			    const char* name,
-				const char* id,
-				double weight,
-				int lenght,
-				int width,
-				int height
-		){
-
-		_n = new char[std::strlen(name)+1];
-		assert(name != nullptr);
-		strcpy(_n, name);
-		
-
-		_id = new char[std::strlen(id)+1];
-		assert(id != nullptr);
-		strcpy(_id, id);
 
 
-		_ww = weight;
-		_l = lenght;
-		_w = width;
-		_h = height;
-
-
+Stoka::Stoka(){
+	_n = nullptr;
+	_id = nullptr;
+	_ww = 0.0f;
+	_l = _w = _h = 0;
 }
 
-
-Stoka::~Stoka(){
-	delete[] _n;
-	delete[] _id;
-}
 
 
 char* Stoka::getName() 	{ return _n;	}
@@ -48,22 +22,20 @@ int Stoka::geth()		{ return _h;	}
 
 
 
-void Stoka::setName(const char* name) { 
-	
-	if(_n != nullptr) delete[] _n;
-
-	_n = new char[std::strlen(name)+1];
-	assert(name != nullptr);
+void Stoka::setName(char* name) { 
+	if(_n!=NULL){
+		delete[] _n;
+	}
+	_n = new char[strlen(name)+1];
 	strcpy(_n, name);
 }
 
 
-void Stoka::setId(const char* id){
-
-	if(_id != nullptr) delete[] _id;
-
-	_id = new char[std::strlen(id)+1];
-	assert(_id != nullptr);
+void Stoka::setId(char* id){
+	if(_id!=NULL){
+		delete[] _id;
+	}
+	_id = new char[strlen(id)+1];
 	strcpy(_id, id);
 }
 
@@ -76,15 +48,15 @@ void Stoka::seth(int h) { _h = h; }
 
 std::istream& operator >> (std::istream& in, Stoka& obj){
 	
-	char* n = new char[20];
-	char* i = new char[20];
+	char name[100];
+	char id[100];
+	in >> name >> id;
+	obj.setName(name);
+	obj.setId(id);
+	in.clear();
+	in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	in >> n >> i;
-	obj.setName(n);
-	obj.setId(i);
-	delete[] n;
-	delete[] i;
-
+	
 	in >> obj._ww >> obj._l >> obj._w >> obj._h;
 
 	return in;

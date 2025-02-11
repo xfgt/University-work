@@ -16,17 +16,8 @@ class Stoka{
 
 	public:
 
-		Stoka(
-				const char* = "",
-				const char* = "",
-				double  = 0.,
-				int  = 0,
-				int  = 0,
-				int  = 0
-			 );
-
-		~Stoka();
-
+		Stoka();
+	
 		char* getName();
 		char* getId();
 		double getww();
@@ -35,8 +26,8 @@ class Stoka{
 		int geth();
 
 
-		void setName(const char*);
-		void setId(const char*);
+		void setName(char*);
+		void setId(char*);
 		void setww(double);
 		void setl(int);
 		void setw(int);
