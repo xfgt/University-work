@@ -12,10 +12,31 @@ class H{
 		int b;
 		float c;
 
-
 	public:
-	 // getters
-	 // setters
+		H(const char* x = "", int y =0, float z=0.){
+			a = new char[strlen(x)+1];
+			strcpy(a, x);
+
+			b = y;
+			c = z;
+
+		}
+
+		void seta(char* q){
+			if(a != nullptr) delete[] a; // empty *this on reach
+			a = new char[strlen(q) + 1];
+			strcpy(a, q);
+		}
+		char* geta() {return a;}
+
+
+		void setb(int w) { b = w;}
+		int getb()	{return b;}
+
+		void setc(float e) {c = e;}
+		float getc() {return c;}
+
+
 };
 
 
@@ -28,7 +49,7 @@ std::ostream& operator << (std::ostream& out, H& obj)
 }
 std::istream& operator >> (std::istream& in, H& obj){
 
-	char x[] {};
+	char* x;
 	in >> x;
 
 	obj.seta(x);
