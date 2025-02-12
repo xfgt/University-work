@@ -16,7 +16,9 @@ int main(){
 	if(!ofs){
 		std::cout << "Error creating file!\n"; return 1;
 	}
-	ofs.write(reinterpret_cast<char*>(s), sizeof(Stoka));
+	for(int i = 0; i < 5; i++){
+		ofs.write(reinterpret_cast<char*>(&s[i]), sizeof(Stoka));
+	}
 	ofs.close();
 
 
@@ -27,8 +29,10 @@ int main(){
 		std::cout << "Error opening file!\n"; return 1;
 	}
 	Stoka rs[5];
-
-	ifs.read(reinterpret_cast<char*>(rs), sizeof(Stoka));
+	
+	for(int i = 0; i < 5; i++){
+		ifs.read(reinterpret_cast<char*>(&rs[i]), sizeof(Stoka));
+	}
 	ifs.close();
 	
 
