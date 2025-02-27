@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Solutions {
     public static void main(String[] args) {
         //System.out.println(task1());
-        System.out.println(task2());
+        //System.out.println(task2());
 
     }
 
@@ -44,20 +44,40 @@ public class Solutions {
         if (n < 1 || n > 9) return 0;
 
         int NUM = 0;
-        int sum = 0;
 
-        for(int i = 1; i <= n; i++) {
-            NUM += i * 2;
+        for(int k = 1; k <= n; k++){
+            for(int i = k; i <= n; i++) {
+                NUM += i * 2;
+            }
         }
 
-        for(int i = 0, d = 2; i < n; i++, d += 2){
-            sum += NUM - d;
+        for(int h = 1; h < n; h++){
+            for(int i = n; i >= h; i--) {
+                NUM += i * 2;
+            }
         }
-        sum *= 2;
-        sum += n * 2;
+        return NUM;
+    }
+    class Manager{
+
+        String m_name;
+        String m_date;
+
+        public Manager(String name){
+            m_name = name;
+
+        }
+        public String getName() { return m_name;}
+        public String getDate() { return m_date;}
+
+        public void setName (String name) { m_name = name;}
+        public void setDate(String date) {
 
 
 
-        return 1;
+            m_date = date;
+
+        }
+
     }
 }
