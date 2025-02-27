@@ -1,11 +1,15 @@
 package Course408.homeworks.hw1;
 
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Solutions {
     public static void main(String[] args) {
         //System.out.println(task1());
         //System.out.println(task2());
+        Manager m = new Manager("Ben");
+        m.setDate();
 
     }
 
@@ -58,26 +62,34 @@ public class Solutions {
         }
         return NUM;
     }
-    class Manager{
+    public static class Manager{
 
-        String m_name;
-        String m_date;
+        private String m_name;
+        private String m_date;
 
         public Manager(String name){
             m_name = name;
-
+            setDate();
         }
         public String getName() { return m_name;}
         public String getDate() { return m_date;}
 
         public void setName (String name) { m_name = name;}
-        public void setDate(String date) {
+        public void setDate() {
+            Scanner scanner = new Scanner(System.in);
 
+            int year = Integer.parseInt(scanner.nextLine());
+            int month = Integer.parseInt(scanner.nextLine());
+            int date = Integer.parseInt(scanner.nextLine());
 
-
-            m_date = date;
+            m_date = year + "-" + month + "-" + date;
 
         }
 
+        public void changeDate(String date_arg){
+            m_date = date_arg;
+        }
+
+        public void print
     }
 }
