@@ -1,8 +1,12 @@
 package Course408.homeworks.hw1;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
+
+
+
 
 class Manager{
 
@@ -63,7 +67,66 @@ class Manager{
 
     }
 }
+class Studio{
+    int id;
+    BigDecimal leva_rentForHour;
+    int maximumHoursPerDay; // 0-24
+    int hoursRent;
+    static BigDecimal minimalPrice; // for all objects of Studio
+    BigDecimal euroRate;
 
+
+    public Studio(int id, int maxH){
+        this.id = id;
+        if(maxH >= 0 && maxH <= 24)
+            maximumHoursPerDay = maxH;
+        else
+            maximumHoursPerDay = 24;
+    }
+
+    public static void setMinimalPrice(BigDecimal mp) {
+        if(mp.compareTo(BigDecimal.ZERO) < 0)
+            minimalPrice = new BigDecimal(0);
+        else minimalPrice = new BigDecimal(mp.intValue());
+
+    }
+    public void setLeva_rentForHour(BigDecimal price){
+        if(price.compareTo(minimalPrice) == 1){
+           leva_rentForHour = price;
+        } else {
+            leva_rentForHour = minimalPrice;
+        }
+    }
+    public void setHoursRent(int hours){
+        if(hours > maximumHoursPerDay) hoursRent = maximumHoursPerDay;
+        else
+            hoursRent = hours;
+    }
+    public void setEuroRate(BigDecimal value){
+        euroRate = value;
+    }
+
+
+    public int getId() {return id;}
+    public BigDecimal getLeva_rentForHour() {return leva_rentForHour;}
+    public int getMaximumHoursPerDay() {return maximumHoursPerDay;} // 0-24
+    public int getHoursRent() {return hoursRent;}
+    public BigDecimal getMinimalPrice() {return minimalPrice;}; // for all objects of Studio
+    public BigDecimal getEuroRate() {return euroRate;}
+
+    public BigDecimal getLeva_Profit() {return getLeva_rentForHour().multiply(BigDecimal.valueOf(hoursRent));}
+    public BigDecimal getEuro_Profit() { return getLeva_Profit().multiply(getEuroRate());}
+
+    public Studio compareByLevaRentForHour(Studio first, Studio second){
+        if(first.getLeva_rentForHour().compareTo(second.getLeva_rentForHour()) == 1) return first;
+        else return second;
+    }
+
+    public boolean compareByProfit(Studio first, Studio second){
+        if(first.getLeva_Profit().compareTo(second.getLeva_Profit()) == 1) return true;
+        return false;
+    }
+}
 
 
 public class Solution {
@@ -72,6 +135,7 @@ public class Solution {
         //System.out.println(task1());
         //System.out.println(task2());
         //task3();
+        task4();
 
 
     }
@@ -126,20 +190,52 @@ public class Solution {
         return NUM;
     }
     public static void task3(){
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String name;
         int year, month, day, y,mm,d;
-        name = sc.nextLine();
+        name = scanner.nextLine();
         Manager m = new Manager(name);
-        m.setDate(sc.nextInt(), sc.nextInt(), sc.nextInt());
+        m.setDate(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
 
 
-        y = sc.nextInt();
-        mm = sc.nextInt();
-        d = sc.nextInt();
+        y = scanner.nextInt();
+        mm = scanner.nextInt();
+        d = scanner.nextInt();
         String checkDate = y + "-" + mm + "-" + d;
         m.print();
         System.out.println(m.numberOfYearsInCompanyTill(checkDate));
+    }
+
+    public static void task4(){
+        Scanner scanner = new Scanner(System.in);
+
+        int id, maxh, wh;
+        BigDecimal mp, e, pph;
+        id = scanner.nextInt(); maxh = scanner.nextInt();
+        Studio s1 = new Studio(id, maxh);
+
+        mp = scanner.nextBigDecimal();
+        Studio.setMinimalPrice(mp);
+        e = scanner.nextBigDecimal();
+        s1.setEuroRate(e);
+
+        pph = scanner.nextBigDecimal();
+        wh = scanner.nextInt();
+        s1.setLeva_rentForHour(pph);
+        s1.setHoursRent(wh);
+
+        id = scanner.nextInt(); maxh = scanner.nextInt();
+        Studio s2 = new Studio(id, maxh);
+        pph = scanner.nextBigDecimal();
+        wh = scanner.nextInt();
+        s2.setLeva_rentForHour(pph);
+        s2.setHoursRent(wh);
+
+        System.out.printf("%.1f\n", s1.getLeva_Profit());
+        System.out.printf("%.3f\n", s1.getEuro_Profit());
+        System.out.println(s1.compareByLevaRentForHour(s1, s2).getId());
+        System.out.println(s1.compareByProfit(s1, s2));
+
     }
 
 
