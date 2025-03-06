@@ -137,7 +137,7 @@ public class Solution {
         //task3();
         task4();
 
-
+        
     }
 
 
@@ -165,6 +165,7 @@ public class Solution {
                 count++;
             }
         }
+        scanner.close();
         return count;
 
 
@@ -187,6 +188,7 @@ public class Solution {
                 NUM += i * 2;
             }
         }
+        scanner.close();
         return NUM;
     }
     public static void task3(){
@@ -204,6 +206,7 @@ public class Solution {
         String checkDate = y + "-" + mm + "-" + d;
         m.print();
         System.out.println(m.numberOfYearsInCompanyTill(checkDate));
+        scanner.close();
     }
 
     public static void task4(){
@@ -235,6 +238,7 @@ public class Solution {
         System.out.printf("%.3f\n", s1.getEuro_Profit());
         System.out.println(s1.compareByLevaRentForHour(s1, s2).getId());
         System.out.println(s1.compareByProfit(s1, s2));
+        scanner.close();
 
     }
 
