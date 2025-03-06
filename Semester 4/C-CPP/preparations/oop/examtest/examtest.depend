@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1739371486 source:c:\users\mrslave\desktop\examtest\main.cpp
+	<iostream>
+	"A.h"
+
+1739371017 c:\users\mrslave\desktop\examtest\include\a.h
+	<iostream>
+
+1739371476 source:c:\users\mrslave\desktop\examtest\src\a.cpp
+	"A.h"
+	<iostream>
+	<cstring>
+
