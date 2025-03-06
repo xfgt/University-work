@@ -15,6 +15,9 @@ import java.util.Scanner;
 	public String getName() { return m_name; }
 	public Boolean providesExtendedWarranty() { return m_providesExtendedWarranty; }
 	
+	public void setName(String name) { m_name = name; }
+	public void setRuleForExtendedWarranty(Boolean rule) { m_providesExtendedWarranty = rule; }
+	
 	@Override
 	public String toString() {
 		
@@ -43,6 +46,8 @@ import java.util.Scanner;
 			m_monthsOfWarranty = minimalWarranty;
 		
 	}
+	public void setWarranty(int amountOfMonths) { m_monthsOfWarranty = amountOfMonths; }
+	
 	public int warranty() {
 		if(m_manifacturer.providesExtendedWarranty()) {
 			m_monthsOfWarranty += 12;
@@ -67,16 +72,19 @@ import java.util.Scanner;
 	private Manifacturer m_manifacturer;
 	private int m_minimalWarranty;
 	private Boolean m_isGas;
-	
+		
 	public Cooker(Manifacturer manifacturer, int minWarranty, Boolean isGas){
 		super(manifacturer, minWarranty);
+		m_manifacturer = manifacturer;
+		m_minimalWarranty = minWarranty;
 		m_isGas = isGas;
 	}
-	@Override
+	
 	public int warranty() {
 		
 		if(m_isGas == true) {
-			m_minimalWarranty += 12;
+			m_minimalWarranty += super.warranty();
+			
 		}
 		return m_minimalWarranty;
 	}
@@ -99,13 +107,16 @@ import java.util.Scanner;
 	
 	public WashingMachine(Manifacturer manifacturer, int minWarranty, Boolean tumbleDrier){
 		super(manifacturer, minWarranty);
+		m_manifacturer = manifacturer;
+		m_minimalWarranty = minWarranty;
 		m_isTumbleDrier = tumbleDrier;
 	}
-	@Override
+	
 	public int warranty() {
 		
 		if(m_isTumbleDrier == true) {
-			m_minimalWarranty += m_minimalWarranty * 0.5;
+			m_minimalWarranty = super.warranty();
+			// x += x * 0.5
 		}
 		
 		return m_minimalWarranty;
