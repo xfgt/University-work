@@ -15,22 +15,12 @@ import java.util.Scanner;
 	public String getName() { return m_name; }
 	public Boolean providesExtendedWarranty() { return m_providesExtendedWarranty; }
 	
-	public void setName(String name) { m_name = name; }
-	public void setRuleForExtendedWarranty(Boolean rule) { m_providesExtendedWarranty = rule; }
 	
-	@Override
-	public String toString() {
-		
-		return "Manifacturer{" +
-                "name=" + m_name +
-                "providesExtendedWarranty=" + m_providesExtendedWarranty + 
-                '}';
-	}
 
 }
 
  class ElectricDevice extends Manifacturer {
-	private Manifacturer m_manifacturer;
+	
 	private int m_monthsOfWarranty;
 	
 	public ElectricDevice(
@@ -38,99 +28,69 @@ import java.util.Scanner;
 					int minimalWarranty)
 	{
 		super(manifacturer.getName(), manifacturer.providesExtendedWarranty());
-		m_manifacturer = manifacturer;
 		
-		if(minimalWarranty < 6)
-			m_monthsOfWarranty = 6;
-		else
-			m_monthsOfWarranty = minimalWarranty;
+		
 		
 	}
-	public void setWarranty(int amountOfMonths) { m_monthsOfWarranty = amountOfMonths; }
+	
 	
 	public int warranty() {
-		if(m_manifacturer.providesExtendedWarranty()) {
-			m_monthsOfWarranty += 12;
+		if(super.providesExtendedWarranty()) {
+			
 		}
 		return m_monthsOfWarranty;
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "ElectricDevice{" +
-                "Manifacturer=" + m_manifacturer +
-                "monthsOfWarranty" + warranty() +
-                '}';
-	}
+	
 	
 }
 
 
  class Cooker extends ElectricDevice {
 	
-	private Manifacturer m_manifacturer;
+	
 	private int m_minimalWarranty;
 	private Boolean m_isGas;
 		
 	public Cooker(Manifacturer manifacturer, int minWarranty, Boolean isGas){
 		super(manifacturer, minWarranty);
-		m_manifacturer = manifacturer;
-		m_minimalWarranty = minWarranty;
+		
 		m_isGas = isGas;
 	}
 	
 	public int warranty() {
 		
 		if(m_isGas == true) {
-			m_minimalWarranty += super.warranty();
 			
 		}
 		return m_minimalWarranty;
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "Cooker{" +
-                "Manifacturer=" + m_manifacturer.getName() + 
-                "monthsOfWarranty" + warranty() +
-                "isGas" + m_isGas +
-                '}';
-	}
+	
 	
 }
  class WashingMachine extends ElectricDevice {
-	private Manifacturer m_manifacturer;
+	
 	private int m_minimalWarranty;
 	private Boolean m_isTumbleDrier;
 	
 	public WashingMachine(Manifacturer manifacturer, int minWarranty, Boolean tumbleDrier){
 		super(manifacturer, minWarranty);
-		m_manifacturer = manifacturer;
-		m_minimalWarranty = minWarranty;
+		
+		
 		m_isTumbleDrier = tumbleDrier;
 	}
 	
 	public int warranty() {
 		
 		if(m_isTumbleDrier == true) {
-			m_minimalWarranty = super.warranty();
-			// x += x * 0.5
+			
 		}
 		
 		return m_minimalWarranty;
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "WashingMachine{" +
-                "Manifacturer=" + m_manifacturer.getName() + 
-                "monthsOfWarranty" + warranty() +
-                "isTumbleDrier" + m_isTumbleDrier +
-                '}';
-	}
+	
 }
 
 
@@ -156,7 +116,7 @@ public class Solution {
 		System.out.println(ed.warranty());
 		
 		boolean isDrier_b = (isDrier_int == 0) ? false : true;
-		ed = new Cooker(m, mw, isDrier_b);
+		ed = new WashingMachine(m, mw, isDrier_b);
 		System.out.println(ed.warranty()); // todo debug and submit solution
 		
 		scanner.close();
