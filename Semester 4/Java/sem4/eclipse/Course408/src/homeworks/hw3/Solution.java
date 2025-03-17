@@ -111,7 +111,7 @@ import java.util.Scanner;
 				
 				// 1% increase if fragile
 				if(W_material.isMaterialFragile()) {
-					W_DeliveryPrice = W_DeliveryPrice - W_DeliveryPrice * 0.01;
+					W_DeliveryPrice = W_DeliveryPrice + W_DeliveryPrice * 0.01;
 					//(wdp -= wdp * 0.01)
 				}
 				return W_DeliveryPrice;
@@ -143,9 +143,12 @@ public class Solution {
 		double additionalPrice = Double.parseDouble(scanner.nextLine());
 		
 		
-		
+		DeliverableItem di = new DeliverableItem(toAddress);
+		di.setAdditionalPrice(additionalPrice);
 		
 		IFDeliverable devb = new Document(minPrice, toAddress);
+		
+		
 		
 		System.out.println(devb.deliveryPrice());
 		
