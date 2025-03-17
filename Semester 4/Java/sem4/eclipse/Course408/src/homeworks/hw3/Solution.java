@@ -1,79 +1,78 @@
 package homeworks.hw3;
 
-
-
 import java.util.Scanner;
 
 
-public class Solution {
-	
-	
 	interface IFDeliverable{
 		double deliveryPrice();
 	}
 	
+
+	class DeliverableItem implements IFDeliverable {
 	
-	
-	
-	class DeliverableItem implements IFDeliverable{
-		
-		Boolean atAddress;
-		double extraFee;
-		
-		
-		
-		public DeliverableItem(Boolean atAddress) {
-			this.atAddress = atAddress;	
+		Boolean DI_deliverToAddress;
+		static double DI_additionalPrice;
+				
+		public DeliverableItem(Boolean toAddress) {
+			DI_deliverToAddress = toAddress;
 		}
 		
-		void setExtraFee(double amount) {
+		public void setAdditionalPrice(double additionalPrice) {
 			
-			if(atAddress) {
-				if(amount > 0)
-					extraFee = amount;
-				else 
-					extraFee = 1;
+			if(DI_deliverToAddress) {
+				if(additionalPrice > 0)
+					DI_additionalPrice = additionalPrice;
+				else
+					DI_additionalPrice = 1;
 			}
 				
-			
-			
 		}
+		
+		public final Boolean getDeliveryType() { return DI_deliverToAddress; }
 		
 		@Override
 		public double deliveryPrice() {
-			return extraFee;
+			return DI_additionalPrice;
 		}
 	}
 	
+	
+	
+	
+//	Material class
 	class Material{
-		String name;
-		Boolean isFragile;
+		String M_name;
+		Boolean M_isFragile;
 		
 		public Material(String name, Boolean isFragile) {
-			this.name = name;
-			this.isFragile = isFragile;
+			M_name = name;
+			M_isFragile = isFragile;
 		}
 		
-		public Boolean isMaterialFragile() { return isFragile; }
+		public Boolean isMaterialFragile() { return M_isFragile; }
 	}
 	
+	
+	
+	
+	
 	class Document extends DeliverableItem implements IFDeliverable{
-		double minimalDeliveryPrice;
+		double D_minimalDeliveryPrice;
 		
-		public Document(double price, Boolean atAddress) {
-			super(atAddress);
+		public Document(double price, Boolean deliverToAddress) {
+			super(deliverToAddress);
 			if(price > 0)
-				minimalDeliveryPrice = price;
+				D_minimalDeliveryPrice = price;
 			else
-				minimalDeliveryPrice = 1;
+				D_minimalDeliveryPrice = 1;
 		}
 		
 		@Override
 		public double deliveryPrice(){
-			if(super.atAddress) {
-				minimalDeliveryPrice += super.deliveryPrice();
+			if(super.getDeliveryType()) {
+				D_minimalDeliveryPrice += super.deliveryPrice();
 			}
-			return minimalDeliveryPrice;
+			return D_minimalDeliveryPrice;
 		}
 		
 	
@@ -81,54 +80,56 @@ public class Solution {
 	
 	class WeightedItem extends DeliverableItem implements IFDeliverable{
 		
-		Material material;
-		double weight;
-		double _wDeliveryPrice;
+		Material W_material;
+		double W_weight;
+		double W_DeliveryPrice;
 		
-		public WeightedItem(Material material, double weight, double price, Boolean atAddress) {
-			super(atAddress);
-			this.material = material;
-			
-			if(price > 0 && weight > 0) {
-				this.weight = weight;
-				_wDeliveryPrice = price;
-			} else {
-				this.weight = 1;
-				_wDeliveryPrice = 1;
+			public WeightedItem(Material material, double weight, double price, Boolean deliverToAddress) {
+				super(deliverToAddress);
+				W_material = material;
 				
+				if(price > 0 && weight > 0) {
+					W_weight = weight;
+					W_DeliveryPrice = price;
+				} else {
+					W_weight = 1;
+					W_DeliveryPrice = 1;
+					
+				}
+					
 			}
+			
+			@Override
+			public double deliveryPrice() {
 				
-		}
-		
-		@Override
-		public double deliveryPrice() {
-			
-			_wDeliveryPrice *= weight;
-			
-			if(super.atAddress) {
-				_wDeliveryPrice += super.deliveryPrice();
+				W_DeliveryPrice *= W_weight;
+				
+				if(super.getDeliveryType()) {
+					W_DeliveryPrice += super.deliveryPrice();
+				}
+				
+				
+				// 1% increase if fragile
+				if(W_material.isMaterialFragile()) {
+					W_DeliveryPrice = W_DeliveryPrice - W_DeliveryPrice * 0.01;
+					//(wdp -= wdp * 0.01)
+				}
+				return W_DeliveryPrice;
 			}
-			
-			
-			// 1% increase if fragile
-			if(material.isMaterialFragile()) {
-				_wDeliveryPrice = _wDeliveryPrice - _wDeliveryPrice * 0.01;
-				//(wdp -= wdp * 0.01)
-			}
-			return _wDeliveryPrice;
-		}
-		
 	}
-		
-		
+	
+
+	
+public class Solution {
+	
+
 	static Boolean toBooleanValue(int x) {
 		return (x == 1 ? true : false);
 	}
-	
-	
+
 	public static void main(String[] args) {
-		
 		Scanner scanner = new Scanner(System.in);
+		
 		String materialName = scanner.nextLine();
 		
 		int holdIsFragile = Integer.parseInt(scanner.nextLine());
@@ -144,14 +145,26 @@ public class Solution {
 		
 		
 		
+		IFDeliverable devb = new Document(minPrice, toAddress);
+		
+		System.out.println(devb.deliveryPrice());
+		
+		Material mat = new Material(materialName, isFragile);
+		
+		IFDeliverable devf = new WeightedItem(mat, weight, pricePerKg, toAddress);
+		System.out.println(devf.deliveryPrice());
 		
 		
 		
 		
 		
 		
-		return;
+		
+		
+		
+		
 		
 	}
 
 }
+
