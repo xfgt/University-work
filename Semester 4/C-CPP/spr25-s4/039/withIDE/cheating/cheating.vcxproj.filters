@@ -21,5 +21,11 @@
     <ClCompile Include="heapSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LSD_radixSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quickSort_withMediane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

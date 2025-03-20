@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="countingSort.cpp" />
     <ClCompile Include="heapSort.cpp" />
+    <ClCompile Include="quickSort_withMediane.cpp" />
+    <ClCompile Include="LSD_radixSort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
