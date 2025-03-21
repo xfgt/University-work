@@ -55,7 +55,8 @@ void counting_sort(int* a, int* b, int* c) {
 	for (int i = 0; i < N; i++) {
 		++b[a[i]];
 	}
-	printArray("number frequency:\t", b, 1, N + 1, '{', '}');
+	printArray("indexes:\t\t", nullptr, 1, (N + 1), '[', ']');
+	printArray("number frequency:\t", b, 1, (N + 1), '{', '}');
 	
 
 	// step 2
@@ -66,7 +67,7 @@ void counting_sort(int* a, int* b, int* c) {
 	
 
 	// step 3 final
-	for (int i = N-1; i >= 0; i--) {
+	for (int i = N-1; i > 0; i--) { // TODO: problem here
 		c[b[a[i]]] = a[i];
 		b[a[i]]--;
 	}
@@ -81,7 +82,8 @@ void result() {
 	std::cout << '\n';
 	counting_sort(a, b, c);
 	printArray("*Sorted array (C):\t", c, 1, (N + 1), '{', '}');
-	printArray("\nindexes:\t\t", nullptr, 1, (N + 1), '[', ']');
+	printArray("indexes:\t\t", nullptr, 1, (N + 1), '[', ']');
+	printf("================================================\n");
 }
 
 int main() {
