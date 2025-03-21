@@ -1,4 +1,4 @@
-#if 0
+#if 1
 
 #include <iostream>
 #include <cstdlib>
@@ -17,7 +17,7 @@ using namespace std;
 
 #if 1
 	int a[N];
-	int b[N + 1]{}; // frequency array
+	int b[N + 1]; // frequency array
 	int c[N + 1];
 #endif
 
@@ -50,7 +50,10 @@ void initArrayRands(int* arr, int n, int min, int max) {
 }
 
 void counting_sort(int* a, int* b, int* c) {
-	
+	memset(b, N + 1, 0); // fix no reset to 0 
+						// exclude third array
+						// 
+						//		the algorithm works anyway.
 	// step 1
 	for (int i = 0; i < N; i++) {
 		++b[a[i]];
@@ -67,23 +70,23 @@ void counting_sort(int* a, int* b, int* c) {
 	
 
 	// step 3 final
-	for (int i = N-1; i > 0; i--) { // TODO: problem here
+	for (int i = N-1; i >= 0; i--) { 
 		c[b[a[i]]] = a[i];
 		b[a[i]]--;
 	}
-	printf("after the magic:\n c[b[a[i]]] = a[i];\n b[a[i]]--; \n");
+	printf("\nafter the magic:\tc[b[a[i]]] = a[i]; b[a[i]]--;\n");
 	
 }
 
 
 void result() {
-	printArray("*COUNTING SORT\n\n\nOriginal array:\t\t", a, 0, N, '{', '}');
+	printArray("*COUNTING SORT\n\Original array:\t\t", a, 0, N, '{', '}');
 	printArray("indexes:\t\t", nullptr, 0, N, '[', ']');
 	std::cout << '\n';
 	counting_sort(a, b, c);
-	printArray("*Sorted array (C):\t", c, 1, (N + 1), '{', '}');
-	printArray("indexes:\t\t", nullptr, 1, (N + 1), '[', ']');
-	printf("================================================\n");
+	printArray("*Sorted array (C):\t", c, 0, (N + 1), '{', '}');
+	printArray("indexes:\t\t", nullptr, 0, (N + 1), '[', ']');
+	printf("================================================================================================\n");
 }
 
 int main() {
@@ -98,7 +101,7 @@ int main() {
 #endif
 
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 3; i++) { 
 		initArrayRands(a, N, 0, N);
 		result();
 	}
