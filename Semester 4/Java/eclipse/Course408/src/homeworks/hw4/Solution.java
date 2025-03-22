@@ -26,9 +26,6 @@ class Employee{
 		this.name = name;
 		this.workedHours = workedHours;
 		this.contractType = contractType;
-			
-		setSalaryDependingOn(this.contractType);
-		
 	}
 	
 	
@@ -111,15 +108,15 @@ class Company{
 		employeeList.remove(obj);
 	}
 	
-	public BigDecimal averageSalary() {
-	}
-	
-	public void increaseSalaries(BigDecimal percentage) {
-		
-	}
-	public BigDecimal averageSalaryPerContractType() {
-		
-	}
+//	public BigDecimal averageSalary() {
+//	}
+//	
+//	public void increaseSalaries(BigDecimal percentage) {
+//		
+//	}
+//	public BigDecimal averageSalaryPerContractType() {
+//		
+//	}
 }
 
 
@@ -173,7 +170,28 @@ public class Solution {
 		
 		// get input
 		
+		String companyName = scanner.nextLine();
+		int maxEmployees = Integer.parseInt(scanner.nextLine());
+		Contract[] contracts = Contract.values();
 		
+		// TODO: input values for enums
+		
+		ArrayList<Employee> employees = new ArrayList<Employee>();
+		
+		for(int i = 0; i < maxEmployees; i++) {
+			String name = scanner.nextLine();
+			int workedHours = Integer.parseInt(scanner.nextLine());
+			String stringType = scanner.nextLine();
+			Contract typeFromString = Contract.valueOf(stringType);
+			
+			
+			Employee hold = new Employee(name, workedHours, typeFromString);
+			employees.add(hold);
+		}
+		
+		for(Employee x : employees) {
+			System.out.println(x.toString());
+		}
 		
 	}
 
