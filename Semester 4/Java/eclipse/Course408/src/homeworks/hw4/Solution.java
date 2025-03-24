@@ -1,12 +1,30 @@
 package homeworks.hw4;
 
 import java.util.ArrayList;
-import java.math.BigDecimal;
 import java.util.Scanner;
+
+import java.lang.Enum;
+import java.math.BigDecimal;
+
 
 
 enum Contract{
-	PERMANENT, PART_TIME, TRAINEE
+		
+	PERMANENT(new BigDecimal("0.0")), PART_TIME(new BigDecimal("0.0")), TRAINEE(new BigDecimal("0.0"));
+	
+	BigDecimal action;
+	
+	private Contract(BigDecimal action) {
+		this.action = action;
+	}
+	
+	public BigDecimal getAction() { 
+		return this.action; 
+	} 
+	
+	public void setAction(BigDecimal amount) {
+		this.action = amount;
+	}
 }
 
 class Employee{
@@ -33,44 +51,14 @@ class Employee{
 	public String getName() { return name; }
 	public int getWorkedHours() { return workedHours; }
 	public Contract getContractType() { return contractType; }
+	
 	public BigDecimal getMinimalWagePerHour() { return minimalWagePerHour; }
 	public BigDecimal getAdditionalWagePerHour() { return additionalWagePerHour; }
-		
-	// TODO:
 	public BigDecimal getSalary() {
 		return salary;
 	}
 	
-	
-	
-	
-	
-	
-	
 //	Setters
-	public void setMinimalWagePerHourFrom() {
-		this.minimalWagePerHour.setScale(0);
-		return;
-	}
-	
-	public void setAdditionalWagePerHourFrom() {
-		this.additionalWagePerHour.setScale(0);
-		return;
-	}
-	
-	public void setSalaryDependingOn(Contract type) {
-		switch(type) {
-		case PERMANENT:
-			break;
-		case PART_TIME:
-			break;
-		case TRAINEE:
-			break;
-			default:
-				break;
-		}
-	}
-		
 	public void increaseSalaryByPercentOf(BigDecimal percent) {
 		return;
 	}
@@ -99,7 +87,7 @@ class Company{
 	
 	public void hireEmployee(Employee obj) {
 		// if already exists and list has a space
-		if(!(employeeList.contains( obj )) && employeeList.size() > maxEmployees);
+		if(!(employeeList.contains( obj )) && employeeList.size() < maxEmployees);
 			employeeList.add(obj);
 		
 	}
@@ -117,46 +105,10 @@ class Company{
 //	public BigDecimal averageSalaryPerContractType() {
 //		
 //	}
+	
+	
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
