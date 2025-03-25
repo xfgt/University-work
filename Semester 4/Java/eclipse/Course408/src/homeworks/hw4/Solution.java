@@ -128,9 +128,7 @@ class Company{
 		if(percentage.compareTo(BigDecimal.valueOf(0)) <= -1) return;
 		
 		for(Employee employee : employeeList) {
-			employee.setAdditionalWagePerHourBy(
-						employee.getAdditionalWagePerHour().add(	employee.getAdditionalWagePerHour().multiply(percentage)	)
-					);
+			employee.setAdditionalWagePerHourBy(employee.getAdditionalWagePerHour().add(	employee.getAdditionalWagePerHour().multiply(percentage.multiply(BigDecimal.valueOf(0.01)))	));
 		}
 		
 	}
@@ -146,7 +144,7 @@ class Company{
 	}
 	
 	public BigDecimal getSumOfEmployeeSalariesByContractTypeOf(Contract contractType) {
-		BigDecimal sumOfSalaries = new BigDecimal("0.0");
+		BigDecimal sumOfSalaries = new BigDecimal(0);
 		
 		for(Employee x : employeeList) {
 			if(x.getContractType().equals(contractType)) {
@@ -168,17 +166,19 @@ class Company{
 	}
 
 	public BigDecimal getAverageSalary() {
-		return getSumOfEmployeeSalaries().divide(BigDecimal.valueOf(this.getEmployeesQuantity()));
+		if(this.getEmployeesQuantity() != 0)
+			return getSumOfEmployeeSalaries().divide(BigDecimal.valueOf(this.getEmployeesQuantity())).setScale(2);
+		return BigDecimal.valueOf(0).setScale(0);
 	}
 
 	public BigDecimal getAverageSalaryByContractTypeOf(Contract contractType) {
 		// Sum all salaries of CONTRACT TYPE / their quantity
 		
-		BigDecimal sumOfSalariesByType = new BigDecimal("0.0");
+		BigDecimal sumOfSalariesByType = new BigDecimal(0);
 		int q = getEmployeesQuantityByContractTypeOf(contractType);
 		
 		if(q != 0)
-			sumOfSalariesByType = getSumOfEmployeeSalariesByContractTypeOf(contractType).divide(BigDecimal.valueOf(q));
+			sumOfSalariesByType = getSumOfEmployeeSalariesByContractTypeOf(contractType).divide(BigDecimal.valueOf(q)).setScale(2);
 		
 		
 		return sumOfSalariesByType;
@@ -197,8 +197,10 @@ public class Solution {
 				
 //		Global / Company variables input
 		String companyName = scanner.nextLine();
-		int maxEmployees = Integer.parseInt(scanner.nextLine());
-		Company myCompany = new Company(companyName, maxEmployees);
+		String maxEmployees = scanner.nextLine();
+		String[] maxEmployees_arr = maxEmployees.split(" ");
+		int maxEmp = Integer.valueOf(maxEmployees_arr[0]);
+		Company myCompany = new Company(companyName, maxEmp);
 				
 		String additionals = scanner.nextLine();
 		String[] addits_array = additionals.trim().split(" ");
@@ -226,7 +228,7 @@ public class Solution {
 		
 		
 //		Employees fill data
-		for(int i = 0; i < maxEmployees; i++) {
+		for(int i = 0; i < maxEmp; i++) {
 			Contract contractTypeFromString = Contract.valueOf(rawStringContractTypes_array[i]);
 			Employee temp = new Employee(
 					name_array[i], 
@@ -253,24 +255,20 @@ public class Solution {
 		// increase function
 		double increase = Double.parseDouble(salariesIncreasePercentage);
 		myCompany.increaseAdditionalSalariesByPercentageOf(BigDecimal.valueOf(increase));
-		System.out.println(myCompany.getAverageSalary().toString()); // to be modified (step 2)
+		for(Employee x : myCompany.employeeList) {
+			x.setInitMinWage();
+			x.setInitSalary();
+		}
+		System.out.println(myCompany.getAverageSalary().toString());
 		
 		
 		// average salary by contract type
-		System.out.println(myCompany.getAverageSalaryByContractTypeOf(Contract.valueOf(contractTypeAverageString)).toString()); // we need step 2
+		System.out.println(myCompany.getAverageSalaryByContractTypeOf(Contract.valueOf(contractTypeAverageString)).toString());
+		
+//		myCompany.listEmployees();
+//		System.out.println();
+		
 		
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
