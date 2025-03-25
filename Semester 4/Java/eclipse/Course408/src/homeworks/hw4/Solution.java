@@ -165,7 +165,7 @@ public class Solution {
 		String[] additionalWages_array = additionalWages.trim().split(" ");
 		
 		
-		for(int i = 0; i < maxEmployees; i++) {
+		for(int i = 0; i <= maxEmployees; i++) {
 			Contract contractTypeFromString = Contract.valueOf(rawStringContractTypes_array[i]);
 			Employee temp = new Employee(
 					name_array[i], 
