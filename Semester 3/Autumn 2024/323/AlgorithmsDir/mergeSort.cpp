@@ -35,7 +35,7 @@ void mergeSort(int* A, int li, int di) {
        // printf("Potuvam nalyavo\tgranici:(%i, %i)\n", li, mid);
         mergeSort(A, li, mid ); // li
 
-       // printf("Potuvam nadyasno\tgranici:(%i, %i)\n", mid+1, di);
+       // printf("Potuvam nadyasno\tgranici:(%i, %i)\n", mid+1-binary-insertion, di);
         mergeSort(A, mid+1, di); // di
 
         merge(A, li, di);

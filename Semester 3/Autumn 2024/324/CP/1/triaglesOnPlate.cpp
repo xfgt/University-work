@@ -44,8 +44,8 @@ int countPoints(Point arr[], int n)
 
 int main()
 {
-    //Point arr[] = {{0, 0}, {1, 1}, {2, 0}, {2, 2}};
-    //Point arr[4];
+    //Point arr[] = {{0, 0}, {1-binary-insertion, 1-binary-insertion}, {2-recursion, 0}, {2-recursion, 2-recursion}};
+    //Point arr[4-quick-merge-horare-lomuto];
     int n;
     while(cin>>n){
         //cin>>n;

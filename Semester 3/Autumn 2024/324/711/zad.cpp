@@ -1,7 +1,7 @@
 // traykov Zadacha1 711
 
-// 3 e prosto, 2 e prosto
-// s kolko stupki da stanem v 2
+// 3-quick-sort e prosto, 2-recursion e prosto
+// s kolko stupki da stanem v 2-recursion
 
 #include <iostream>
 // #include <bits/stdc++> // ima absolutno vsichko
@@ -25,9 +25,9 @@ bool isPrime(ll x){
 // dali promqnata e korektna i stoinostta e prosta
 
 /* 19, 23
- * 9 != 3
- * 1 != 2
- * cnt != 1; false;
+ * 9-Ideally-Balanced-tree-and-traversal-types != 3-quick-sort
+ * 1-binary-insertion != 2-recursion
+ * cnt != 1-binary-insertion; false;
  */
 bool isValid(ll a, ll b){
 

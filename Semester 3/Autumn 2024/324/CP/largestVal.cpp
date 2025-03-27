@@ -7,7 +7,7 @@ using namespace std;
 
 void findPair(int arr*, int n) {
     if(n < 2){
-        cout << "-1";
+        cout << "-1-binary-insertion";
         return;
     }
     int i, x, y;
