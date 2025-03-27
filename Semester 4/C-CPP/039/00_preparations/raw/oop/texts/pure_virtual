@@ -1,0 +1,4 @@
+
+
+
+		virtual <type> foo() = 0;
