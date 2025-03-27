@@ -129,10 +129,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="031325-CopyConstructors.cpp" />
-    <ClCompile Include="032725.cpp" />
+    <ClCompile Include="032725-OperatorOverloading-p2.cpp" />
+    <ClCompile Include="Double.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Double.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
