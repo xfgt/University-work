@@ -1,0 +1,85 @@
+\begin{theindex}
+
+  \item {COUNT}
+    \subitem {traversal.cpp}, \hyperpage{4}
+
+  \indexspace
+
+  \item {D:/Documents/Personel/dev-\/and-\/related/University/Programming/Semester 3/Autumn 2024/323/9-\/Ideally-\/Balanced-\/tree-\/and-\/traversal-\/types/IdealyBalancedTree.cpp}, 
+		\hyperpage{2}
+  \item {D:/Documents/Personel/dev-\/and-\/related/University/Programming/Semester 3/Autumn 2024/323/9-\/Ideally-\/Balanced-\/tree-\/and-\/traversal-\/types/traversal.cpp}, 
+		\hyperpage{3}
+  \item {D:/Documents/Personel/dev-\/and-\/related/University/Programming/Semester 3/Autumn 2024/323/9-\/Ideally-\/Balanced-\/tree-\/and-\/traversal-\/types/traversal.h}, 
+		\hyperpage{4}, \hyperpage{6}
+  \item {data}
+    \subitem {node}, \hyperpage{2}
+  \item {DataT}
+    \subitem {traversal.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {ibd}
+    \subitem {IdealyBalancedTree.cpp}, \hyperpage{3}
+  \item {IdealyBalancedTree.cpp}
+    \subitem {ibd}, \hyperpage{3}
+    \subitem {main}, \hyperpage{3}
+    \subitem {n}, \hyperpage{3}
+  \item {Inorder\_infix\_LNR}
+    \subitem {traversal.cpp}, \hyperpage{4}
+    \subitem {traversal.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {left}
+    \subitem {node}, \hyperpage{2}
+
+  \indexspace
+
+  \item {main}
+    \subitem {IdealyBalancedTree.cpp}, \hyperpage{3}
+
+  \indexspace
+
+  \item {n}
+    \subitem {IdealyBalancedTree.cpp}, \hyperpage{3}
+  \item {node}, \hyperpage{2}
+    \subitem {data}, \hyperpage{2}
+    \subitem {left}, \hyperpage{2}
+    \subitem {right}, \hyperpage{2}
+
+  \indexspace
+
+  \item {po}
+    \subitem {traversal.h}, \hyperpage{5}
+  \item {Postorder\_postfix\_LRN}
+    \subitem {traversal.cpp}, \hyperpage{4}
+    \subitem {traversal.h}, \hyperpage{5}
+  \item {Preorder\_prefix\_NLR}
+    \subitem {traversal.cpp}, \hyperpage{4}
+    \subitem {traversal.h}, \hyperpage{5}
+  \item {print}
+    \subitem {traversal.cpp}, \hyperpage{4}
+    \subitem {traversal.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {right}
+    \subitem {node}, \hyperpage{2}
+
+  \indexspace
+
+  \item {traversal.cpp}
+    \subitem {COUNT}, \hyperpage{4}
+    \subitem {Inorder\_infix\_LNR}, \hyperpage{4}
+    \subitem {Postorder\_postfix\_LRN}, \hyperpage{4}
+    \subitem {Preorder\_prefix\_NLR}, \hyperpage{4}
+    \subitem {print}, \hyperpage{4}
+  \item {traversal.h}
+    \subitem {DataT}, \hyperpage{5}
+    \subitem {Inorder\_infix\_LNR}, \hyperpage{5}
+    \subitem {po}, \hyperpage{5}
+    \subitem {Postorder\_postfix\_LRN}, \hyperpage{5}
+    \subitem {Preorder\_prefix\_NLR}, \hyperpage{5}
+    \subitem {print}, \hyperpage{5}
+
+\end{theindex}

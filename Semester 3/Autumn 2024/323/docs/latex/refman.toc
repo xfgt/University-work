@@ -1,0 +1,38 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {bulgarian}{}\relax 
+\contentsline {section}{\numberline {1}Класове Указател}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Класове Списък}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Файлове Списък}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Файлове Списък}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Класове Документация}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}node Структура Препратка}{2}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Член данни Документация}{2}{subsubsection.3.1.1}%
+\contentsline {paragraph}{data}{2}{section*.2}%
+\contentsline {paragraph}{left}{2}{section*.3}%
+\contentsline {paragraph}{right}{2}{section*.4}%
+\contentsline {section}{\numberline {4}Файлове Документация}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Personel/dev-\/and-\/related/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}University/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Programming/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester 3/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Autumn 2024/323/9-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ideally-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Balanced-\/tree-\/and-\/traversal-\/types/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Idealy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Balanced\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tree.cpp Файл Справка}{2}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Функции Документация}{3}{subsubsection.4.1.1}%
+\contentsline {paragraph}{ibd()}{3}{section*.7}%
+\contentsline {paragraph}{main()}{3}{section*.8}%
+\contentsline {subsubsection}{\numberline {4.1.2}Променливи Документация}{3}{subsubsection.4.1.2}%
+\contentsline {paragraph}{n}{3}{section*.9}%
+\contentsline {subsection}{\numberline {4.2}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Personel/dev-\/and-\/related/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}University/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Programming/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester 3/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Autumn 2024/323/9-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ideally-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Balanced-\/tree-\/and-\/traversal-\/types/traversal.cpp Файл Справка}{3}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Функции Документация}{4}{subsubsection.4.2.1}%
+\contentsline {paragraph}{Inorder\_infix\_LNR()}{4}{section*.12}%
+\contentsline {paragraph}{Postorder\_postfix\_LRN()}{4}{section*.13}%
+\contentsline {paragraph}{Preorder\_prefix\_NLR()}{4}{section*.14}%
+\contentsline {paragraph}{print()}{4}{section*.15}%
+\contentsline {subsubsection}{\numberline {4.2.2}Променливи Документация}{4}{subsubsection.4.2.2}%
+\contentsline {paragraph}{COUNT}{4}{section*.16}%
+\contentsline {subsection}{\numberline {4.3}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Personel/dev-\/and-\/related/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}University/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Programming/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semester 3/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Autumn 2024/323/9-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ideally-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Balanced-\/tree-\/and-\/traversal-\/types/traversal.h Файл Справка}{4}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Дефинирани типове Документация}{5}{subsubsection.4.3.1}%
+\contentsline {paragraph}{DataT}{5}{section*.20}%
+\contentsline {paragraph}{po}{5}{section*.21}%
+\contentsline {subsubsection}{\numberline {4.3.2}Функции Документация}{5}{subsubsection.4.3.2}%
+\contentsline {paragraph}{Inorder\_infix\_LNR()}{5}{section*.22}%
+\contentsline {paragraph}{Postorder\_postfix\_LRN()}{5}{section*.23}%
+\contentsline {paragraph}{Preorder\_prefix\_NLR()}{5}{section*.24}%
+\contentsline {paragraph}{print()}{5}{section*.25}%
+\contentsline {subsection}{\numberline {4.4}traversal.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{6}{subsection.4.4}%
+\contentsline {section}{{\Bulgarian \CYRA \cyrz \cyrb \cyru \cyrch \cyre \cyrn \ \cyru \cyrk \cyra \cyrz \cyra \cyrt \cyre \cyrl }}{7}{section*.26}%
