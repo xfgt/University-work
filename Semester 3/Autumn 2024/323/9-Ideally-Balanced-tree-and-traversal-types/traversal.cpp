@@ -5,7 +5,11 @@
 #include "traversal.h"
 
 
+/*!
 
+    Това е няакъв текст
+    @param: Asdafasdaf
+ */
 void Preorder_prefix_NLR(po help) {
     if(help) {
         std::cout << help->data << " ";
