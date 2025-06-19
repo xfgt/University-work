@@ -1,0 +1,69 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}LinkedList}
+    \subitem {LinkedList}, \hyperpage{5}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {LinkedList}, \hyperpage{6}
+  \item {copyFrom}
+    \subitem {LinkedList}, \hyperpage{6}
+
+  \indexspace
+
+  \item {data}
+    \subitem {Node}, \hyperpage{8}
+
+  \indexspace
+
+  \item {fillRandom}
+    \subitem {LinkedList}, \hyperpage{6}
+
+  \indexspace
+
+  \item {LinkedList}, \hyperpage{5}
+    \subitem {\texorpdfstring{$\sim$}{\string~}LinkedList}, 
+		\hyperpage{5}
+    \subitem {clear}, \hyperpage{6}
+    \subitem {copyFrom}, \hyperpage{6}
+    \subitem {fillRandom}, \hyperpage{6}
+    \subitem {LinkedList}, \hyperpage{5}
+    \subitem {print}, \hyperpage{6}
+    \subitem {push}, \hyperpage{6}
+    \subitem {sortMerge}, \hyperpage{6}
+    \subitem {sortQuick}, \hyperpage{7}
+  \item {LinkedList.cpp}, \hyperpage{9}
+  \item {LinkedList.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{10}
+  \item {main.cpp}, \hyperpage{10}
+    \subitem {main}, \hyperpage{10}
+
+  \indexspace
+
+  \item {next}
+    \subitem {Node}, \hyperpage{8}
+  \item {Node}, \hyperpage{7}
+    \subitem {data}, \hyperpage{8}
+    \subitem {next}, \hyperpage{8}
+    \subitem {Node}, \hyperpage{7}
+
+  \indexspace
+
+  \item {print}
+    \subitem {LinkedList}, \hyperpage{6}
+  \item {push}
+    \subitem {LinkedList}, \hyperpage{6}
+
+  \indexspace
+
+  \item {sortMerge}
+    \subitem {LinkedList}, \hyperpage{6}
+  \item {sortQuick}
+    \subitem {LinkedList}, \hyperpage{7}
+
+\end{theindex}

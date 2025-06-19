@@ -1,0 +1,3 @@
+D:/dev-and-related/University/Programming/Semester 4/C-CPP/out/build/x64-Debug/CMakeFiles/C_CPP.dir
+D:/dev-and-related/University/Programming/Semester 4/C-CPP/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/dev-and-related/University/Programming/Semester 4/C-CPP/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

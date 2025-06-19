@@ -1,0 +1,7 @@
+﻿  ex1.cpp
+C:\Users\ADMIN\source\repos\Laskov\Traykov_test3\ex1.cpp(59,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  ex3.cpp
+  Generating Code...
+  Traykov_test3.vcxproj -> C:\Users\ADMIN\source\repos\Laskov\x64\Debug\Traykov_test3.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

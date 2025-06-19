@@ -1,0 +1,3 @@
+D:/Documents/Personel/others/bavk/лабупр/resheniq3-G1/out/build/x64-Debug/CMakeFiles/resheniq3_G1.dir
+D:/Documents/Personel/others/bavk/лабупр/resheniq3-G1/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Documents/Personel/others/bavk/лабупр/resheniq3-G1/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,7 @@
+﻿  a.cpp
+  hamilton.cpp
+\a.cpp(1,1): error C1083: Cannot open source file: 'a.cpp': No such file or directory
+  (compiling source file '/a.cpp')
+  
+C:\Users\ADMIN\source\repos\Homework2_Laskov_SquareGraph\Homework2_Laskov_SquareGraph\hamilton.cpp(66,81): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...

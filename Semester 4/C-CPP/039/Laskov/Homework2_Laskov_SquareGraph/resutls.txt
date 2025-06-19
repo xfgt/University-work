@@ -1,0 +1,11 @@
+A: B
+B: A C
+C: B D
+D: C
+
+
+Square graph G^2:
+A: B C
+B: A C D
+C: B D A
+D: C B
