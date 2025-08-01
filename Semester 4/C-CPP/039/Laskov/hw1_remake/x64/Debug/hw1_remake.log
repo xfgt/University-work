@@ -1,5 +1,0 @@
-﻿  main.cpp
-C:\Users\ADMIN\source\repos\Laskov\hw1_remake\main.cpp(130,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  hw1_remake.vcxproj -> C:\Users\ADMIN\source\repos\Laskov\x64\Debug\hw1_remake.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.

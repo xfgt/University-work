@@ -1,8 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (StableMarriage_.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-  Person.cpp
-  StableMarriage.cpp
-  Generating Code...
-  Gale-shapley.vcxproj -> D:\Personel\University-programming\repos\University-work\Semester 4\C-CPP\039\Laskov\x64\Debug\Gale-shapley.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
