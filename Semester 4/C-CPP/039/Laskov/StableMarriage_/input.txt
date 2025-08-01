@@ -1,0 +1,31 @@
+3
+
+5
+A O M N L P
+B P N M L O
+C M P L O N
+D P M O N L
+E O L M N P
+L D B E C A
+M B A D C E
+N A C E D B
+O D A C B E
+P B E A C D
+
+4
+Alex Fiona Emily Gemma Harriet
+Bill Gemma Harriet Fiona Emily
+Callum Gemma Fiona Harriet Emily
+David Emily Harriet Gemma Fiona
+Emily Callum David Bill Alex
+Fiona Callum Bill Alex David
+Gemma Alex Bill Callum David
+Harriet David Callum Bill Alex
+
+3
+A D E F
+B E F D
+C F D E
+D B A C
+E C B A
+F A C B	

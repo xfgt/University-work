@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hw1_remake", "hw1_remake\hw
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Traykov_test3", "Traykov_test3\Traykov_test3.vcxproj", "{E22F63B4-46DC-4A46-A835-10A4807AB275}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gale-shapley", "StableMarriage_\Gale-shapley.vcxproj", "{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{E22F63B4-46DC-4A46-A835-10A4807AB275}.Release|x64.Build.0 = Release|x64
 		{E22F63B4-46DC-4A46-A835-10A4807AB275}.Release|x86.ActiveCfg = Release|Win32
 		{E22F63B4-46DC-4A46-A835-10A4807AB275}.Release|x86.Build.0 = Release|Win32
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Debug|x64.ActiveCfg = Debug|x64
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Debug|x64.Build.0 = Debug|x64
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Debug|x86.ActiveCfg = Debug|Win32
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Debug|x86.Build.0 = Debug|Win32
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Release|x64.ActiveCfg = Release|x64
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Release|x64.Build.0 = Release|x64
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Release|x86.ActiveCfg = Release|Win32
+		{DD75F73E-D2C0-41CD-AE63-CD08BEF6E00B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
