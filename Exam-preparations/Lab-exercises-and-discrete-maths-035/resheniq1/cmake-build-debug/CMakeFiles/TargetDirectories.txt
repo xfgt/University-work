@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/resheniq1/cmake-build-debug/CMakeFiles/resheniq1.dir
-C:/Users/User/Desktop/resheniq1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Desktop/resheniq1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

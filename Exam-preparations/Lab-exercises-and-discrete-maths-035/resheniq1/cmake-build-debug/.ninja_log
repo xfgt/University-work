@@ -1,7 +1,0 @@
-# ninja log v5
-1	128	7400972990017534	build.ninja	a99d121c7a3cb53c
-0	357	7400651112030608	CMakeFiles/resheniq1.dir/1va.cpp.obj	d74e01dc714a31b9
-357	423	7400651112671190	resheniq1.exe	d12742c0ec1bb178
-9	414	7400647857835917	CMakeFiles/resheniq1.dir/2ra.cpp.obj	5476033027a1ad7
-3	463	7400647858326367	CMakeFiles/resheniq1.dir/3ta.cpp.obj	9d43936aaf91eb24
-5	390	7400647857595699	CMakeFiles/resheniq1.dir/main.cpp.obj	a9d477c98068aff5
