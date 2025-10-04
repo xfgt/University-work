@@ -1,3 +1,0 @@
-/home/jeff/github_repos/University-work/build/CMakeFiles/asdf.dir
-/home/jeff/github_repos/University-work/build/CMakeFiles/edit_cache.dir
-/home/jeff/github_repos/University-work/build/CMakeFiles/rebuild_cache.dir
