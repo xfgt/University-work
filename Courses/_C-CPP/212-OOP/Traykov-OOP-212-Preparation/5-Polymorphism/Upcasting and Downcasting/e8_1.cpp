@@ -89,13 +89,15 @@ int main(){
     Base1 * bp = new Base1;
     cout<<"Base1 object "<<*bp<<endl;
 
+
+
     Deriv2 dd(10,20,30);
     cout<<"Deriv2 object "<<dd<<endl<<endl;
 
 ///     UPCASTING PROCEDURE
     cout<<"Static upcast of Deriv2 to Base1:\n";
     bp=&dd; // put a breakpoint in debugging
-    cout<<"Base1 object part is "<<*bp<<endl;
+    cout<<"Base1 object part is "<<*bp<<endl; //#b1=10
 
 
 
@@ -119,7 +121,8 @@ int main(){
      * and we restore the data back. We access it trough 'dp' pointer
      *
      */
-    cout<<"The complete object is "<<*dp<<endl<<endl;
+    cout<<"The complete object is "<<*dp<<endl<<endl; // 10, 20, 30
+
 
 
 
@@ -130,7 +133,7 @@ int main(){
 
     cout<<"Static upcast of Deriv2 to Base2:\n";
     Base2 *bb=&dd;
-    cout<<"Base2 object object part is "<<*bb<<endl;
+    cout<<"Base2 object object part is "<<*bb<<endl; // 20
 
 
 
@@ -142,7 +145,8 @@ int main(){
 
     cout<<"Static downcast from Base2 to Deriv2:\n";
     dp = (Deriv2 *)bb;  // again, c-style casting from the original example.
-    cout<<"The complete object is "<<*dp<<endl<<endl;
+    cout<<"The complete object is "<<*dp<<endl<<endl; // 10, 20, 30
+
 #endif
 
     return 0;
