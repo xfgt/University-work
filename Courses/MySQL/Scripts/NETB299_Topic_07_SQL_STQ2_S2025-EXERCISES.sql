@@ -1,0 +1,110 @@
+
+#1:
+SELECT CITY, COUNT(*) AS "Number of customers"
+FROM Customers
+GROUP BY CITY;
+
+
+#2:
+SELECT CITY, COUNT(*) AS "Number of customers"
+FROM CUSTOMERS
+WHERE CITY != 'London'
+GROUP BY CITY;
+
+
+#3:
+SELECT CITY, COUNT(*) AS "Number of customers"
+FROM CUSTOMERS
+WHERE CITY != 'San Jose'
+GROUP BY CITY;
+
+
+#3B:
+SELECT CITY, COUNT(*) AS "Number of customers"
+FROM CUSTOMERS
+WHERE CITY = 'Berlin' OR CITY = 'San Jose' OR CITY = 'London'
+GROUP BY CITY;
+
+
+#4:
+SELECT ODATE, MAX(amt) AS "Maximum of Amount", MIN(amt) AS "Minimum of Amount"
+FROM ORDERS
+GROUP BY ODATE;
+
+
+#5:
+SELECT SNUM, COUNT(*) AS "Customers Assigned" 
+FROM CUSTOMERS
+GROUP BY SNUM
+HAVING COUNT(*) > 1;
+
+
+#6:
+SELECT CNUM, ODATE, COUNT(*) AS "Number of Orders"
+FROM ORDERS
+GROUP BY CNUM, ODATE
+HAVING COUNT(*) > 1;
+
+
+#7:
+SELECT SNAME, CNAME, COUNT(*) AS "Orders done"
+FROM SUMMARY
+GROUP BY SNAME, CNAME
+HAVING COUNT(*) > 1;
+
+
+#8:
+SELECT CITY, COUNT(*) as "Salespeople in"
+FROM SALESPEOPLE
+WHERE CITY != 'London'
+GROUP BY CITY;
+
+
+#9:
+SELECT CNAME, SUM(amt) AS "Total amount"
+FROM SUMMARY
+GROUP BY CNAME
+HAVING SUM(AMT) > 1500;
+
+
+#10:
+SELECT CNAME, SUM(amt) AS "Total amount"
+FROM SUMMARY
+WHERE SNAME != "Serres"
+GROUP BY CNAME
+HAVING SUM(AMT) > 500;
+
+
+#11:
+SELECT SNAME, SUM(AMT) AS "Total amount", COUNT(*) AS "Orders done"
+FROM SUMMARY
+GROUP BY SNAME
+HAVING SUM(AMT) > 2000;
+
+
+#12:
+SELECT CITY, COUNT(*) AS "Number of customers"
+FROM CUSTOMERS
+GROUP BY CITY
+HAVING COUNT(*) > 1;
+
+
+#13:
+SELECT CITY, AVG(RATING) AS "Average rating"
+FROM CUSTOMERS
+GROUP BY CITY;
+
+
+#14:
+SELECT CITY, AVG(RATING) AS "Average rating"
+FROM CUSTOMERS
+GROUP BY CITY
+HAVING AVG(RATING) < 200;
+
+
+#15:
+SELECT ODATE, COUNT(*) AS "Number of Orders"
+FROM ORDERS
+GROUP BY ODATE
+HAVING COUNT(*) > 1 AND COUNT(*) < 4;
+
