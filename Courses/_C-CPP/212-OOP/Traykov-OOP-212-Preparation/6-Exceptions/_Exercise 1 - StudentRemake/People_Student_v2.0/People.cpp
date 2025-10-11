@@ -62,6 +62,8 @@ void People::print() const{
 	std::cout << "EGN: " << egn << std::endl;
 }
 
+
+
 std::ostream & operator << (std::ostream & out, const People & p){
 	out << "Name: " << p.name << " EGN: " << p.egn << std::endl;
 	return out;
@@ -103,34 +105,32 @@ void Student::read() throw(std::bad_alloc, std::logic_error){
 	double lgrade{};
 
 	lname = new char[20];
-	if (!lname)
-		throw std::bad_alloc();
-
 	legn = new char[10];
-	if (!legn)
-		throw std::bad_alloc();
-
 	lfnum = new char[7];
-	if (!lfnum)
-		throw std::bad_alloc();
 
 
 	std::cin.getline(lname, sizeof(lname)* 20);
-	std::cin.getline(legn, sizeof(legn) * 10); // you can do a check with regex
-	std::cin.getline(lfnum, sizeof(lfnum) * 7); // ~/~
+	std::cin.getline(legn, sizeof(legn) * 10);
+	std::cin.getline(lfnum, sizeof(lfnum) * 7);
 
 
 	int cnt{1};
 	while (!(std::cin >> lgrade) && cnt <= 3) {
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << "[" << cnt++ << "] Please enter a number for grade: ";
+		std::cout << "[" << cnt++ << "] Please enter a number for grade: (\"" << lname << "\")";
 	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 
-	if (!std::cin)
+	if (!std::cin) {
+		delete[] lfnum;
+		delete[] legn;
+		delete[] lname;
+
 		throw std::logic_error("The entered grade is different of floating point type!");
+	}
+
 
 
 	this->set_name(lname);
@@ -139,6 +139,18 @@ void Student::read() throw(std::bad_alloc, std::logic_error){
 	this->set_grade(lgrade);
 
 	std::cin.clear();
+
+}
+
+bool StudentCmp::operator()(const People *pa, const People *pb) const {
+	{
+		auto a = dynamic_cast<const Student*>(pa);
+		auto b = dynamic_cast<const Student*>(pb);
+
+		if (a->get_grade() != b->get_grade())
+			return a->get_grade() > b->get_grade(); // '>' to get the highest grade score
+		return false;
+	}
 }
 
 void Student::set_fnum(char * f){
@@ -181,6 +193,10 @@ void Student::print() const{
 	std::cout << "Faculty number: " << fnum << std::endl;
 	std::cout << "Grade: " << grade << std::endl;
 }
+
+
+
+
 
 std::ostream & operator << (std::ostream & out, const Student & s){
 	out << "Name: " << s.get_name() << " EGN: " << s.get_egn() << std::endl

@@ -2,38 +2,59 @@
 // Created by ADMIN on 10-Oct-25.
 //
 
+// compile with C++ 11
+
 // main.cpp
+
+
 #include "People.h"
 #include <iostream>
-
+#include <algorithm>
 #include <locale.h>
-#include <set>
 #include <windows.h>
-
-using namespace std;
-
-
-std::set<Student*> createCollection(int n) throw (std::bad_alloc, std::logic_error){
+#include <set>
 
 
-    auto collection = new std::set<Student*>();
+
+typedef std::set<People*, StudentCmp> People_ptr_col;
+
+
+People_ptr_col createCollection(int n) throw (std::bad_alloc, std::logic_error){
+
+    People_ptr_col collection;
     Student* s;
 
 
-    for (int i = 0; i < n; i++) {
-        s = new Student();
-        s->read(); // TODO: fix reading next object; make the sorting overlad of operator < for s->grade; p. 52/53
-        collection->insert(s);
+    try {
+        for (int i = 0; i < n; i++) {
+            s = new Student();
+            s->read();
+            collection.insert(s);
+        }
+    } catch (...) {
+        return collection;
     }
-
-
-    return *collection;
+    return collection;
 }
 
 
-void destroyCollection(std::set<Student*>& collection) {
-    collection.clear();
+void destroyCollection(People_ptr_col& collection) {
 
+    for (auto& x : collection) {
+        delete x; // to delete properly first ~Student(), ~People() must be VIRTUAL
+    }
+    collection.clear();
+}
+
+void printCollection(const People_ptr_col& collection){
+    for (const auto& i : collection)
+        std::cout << *(dynamic_cast<Student*>(i)) << std::endl; // polymorphism
+}
+
+
+void getHighestScore(People_ptr_col& col) {
+    std::cout << "*** The student with the highest score goes to: " << *(dynamic_cast<Student*>(*(col.begin()))) << std::endl;
+    std::cout << "\t Congratulations!!!\r\n";
 }
 
 int main(){
@@ -57,27 +78,38 @@ int main(){
 
 
 
-    { // 6 - Exceptions
+    {
+        // 6 - Exceptions
 
 
-        std::set<Student*> StudentsCollection;
+        People_ptr_col StudentsCollection;
+        int records{};
 
         try {
-            StudentsCollection = createCollection(3);
+
+            std::cin >> records;
+            StudentsCollection = createCollection(records); // if error it returns the already filled collection
+            //std::sort(StudentsCollection->begin(), StudentsCollection->end());
+            printCollection(StudentsCollection);
+            getHighestScore(StudentsCollection);
+
+
+            destroyCollection(StudentsCollection);
 
         } catch (const std::bad_alloc& e) {
 
-            destroyCollection(StudentsCollection);
             std::cout << "Caught exception of type BADALLOC: " << e.what() << std::endl;
-
+            destroyCollection(StudentsCollection);
 
         } catch (const std::logic_error& e) {
-            destroyCollection(StudentsCollection);
+
             std::cout << "Caught exception of type LOGICEROR: " << e.what() << std::endl;
+            destroyCollection(StudentsCollection);
 
         } catch (...) {
-            destroyCollection(StudentsCollection);
+
             std::cout << "Caught exception of ~UNSPECIFIED~ type:\r\n" << std::endl;
+            destroyCollection(StudentsCollection);
         }
 
 

@@ -6,6 +6,7 @@
 #ifndef CPP_PEOPLE_H
 #define CPP_PEOPLE_H
 
+#include <cstring>
 #include <iostream>
 #include <limits>
 
@@ -16,7 +17,7 @@ public:
     People(char * = "No Name", char * ="No EGN");
     People(const People &);
 
-    ~People();
+    virtual ~People();
 
     void set_name(char *);
     void set_egn(char *);
@@ -33,13 +34,15 @@ private:
 class Student:public People{
     friend std::ostream & operator << (std::ostream &, const Student &);
     friend std::istream & operator >> (std::istream &, Student &);
+
 public:
     Student(char * = "No Name", char * ="No EGN", char * ="No Faculty Number", double = 2.);
     Student(const Student &);
 
-    ~Student();
+    ~Student() override;
 
     void read() throw(std::bad_alloc, std::logic_error);
+
 
     void set_fnum(char *);
     void set_grade(double);
@@ -50,16 +53,27 @@ public:
     double get_grade() const;
 
     virtual void print() const;
+
+
+
 private:
     char * fnum;
     double grade;
 };
+
+struct StudentCmp {
+    bool operator()(const People* pa, const People* pb) const;
+};
+
+
+
 
 std::ostream & operator << (std::ostream &, const People &);
 std::istream & operator >> (std::istream &, People &);
 
 std::ostream & operator << (std::ostream &, const Student &);
 std::istream & operator >> (std::istream &, Student &);
+
 
 
 #endif //CPP_PEOPLE_H
