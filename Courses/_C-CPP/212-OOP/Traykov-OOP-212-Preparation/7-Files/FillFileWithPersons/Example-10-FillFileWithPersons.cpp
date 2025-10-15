@@ -61,7 +61,7 @@ int main(){
 	fstream file2;
 
 //	Закоментирай блока, само ако искаш да редактираш файла. Иначе ще се загуби
-	{
+	/*{
 		file.open("fill_persons.dat", ios::out); // може да промениш начина на четене.
 		if(!file){
 			cerr << "File could not be opened!\n";
@@ -69,6 +69,7 @@ int main(){
 		}
 		fillFileWithPersons(file);
 	} // когато излезе от обхват, автоматично прави file.close();
+	*/
 
 	std::cout << "Reading now?...";
 	std::cin.get();
