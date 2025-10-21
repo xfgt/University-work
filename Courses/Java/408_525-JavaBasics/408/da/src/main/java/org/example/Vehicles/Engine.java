@@ -1,4 +1,4 @@
-package Vehicles;
+package org.example.Vehicles;
 
 public class Engine {
     private double volume;

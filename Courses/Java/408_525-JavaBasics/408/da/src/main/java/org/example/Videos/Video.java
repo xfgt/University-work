@@ -1,4 +1,4 @@
-package Videos;
+package org.example.Videos;
 
 public class Video {
 

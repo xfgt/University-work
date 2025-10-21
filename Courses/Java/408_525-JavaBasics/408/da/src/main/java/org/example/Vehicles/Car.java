@@ -1,14 +1,13 @@
-package Vehicles;
-
-import java.beans.VetoableChangeListener;
+package org.example.Vehicles;
 
 public class Car extends Vehicle{
     private boolean isWagon;
     private Vehicle vehicle;
 
-    public Car(Engine engine, boolean isWagon) {
-        super(engine);
+    public Car(double engineVolume, Engine engine, boolean isWagon, Vehicle vehicle) {
+        super(engineVolume, engine);
         this.isWagon = isWagon;
+        this.vehicle = vehicle;
     }
 
     public boolean isWagon() {

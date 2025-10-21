@@ -1,4 +1,4 @@
-package repo;
+package org.example.repo;
 
 public class Repository {
 
@@ -41,8 +41,23 @@ public class Repository {
         this.currentSize = currentSize;
     }
 
+
+    public boolean uploadDocument(org.example.repo.Document document){
+        if(availableSpace() >= document.getDocSize()){
+            this.uploadedFiles++;
+            this.currentSize += document.getDocSize();
+            return true;
+        }
+        return false;
+    }
+
+    public double availableSpace() {
+        return this.getMaxSize() - this.getCurrentSize(); // simple, but effective
+    }
+
+
     @Override
-    public String   toString() {
+    public String toString() {
         return "Repository{" +
                 "maxSize=" + maxSize +
                 ", uploadedFiles=" + uploadedFiles +

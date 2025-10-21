@@ -1,11 +1,20 @@
-package repo;
+package org.example.repo;
 
-public class Document {
+public class Document { // if "final" - can't be a base (inherited from)
+    private static int maxCharactersInTitle;
     private String title;
     private String format;
     private double docSize;
 
 
+    public Document() {
+    }
+
+    public Document(String title, String format, double docSize) {
+        this.title = title;
+        this.format = format;
+        this.docSize = docSize;
+    }
 
     public String getTitle() {
         return title;

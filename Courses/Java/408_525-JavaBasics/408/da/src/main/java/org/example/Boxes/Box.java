@@ -1,4 +1,4 @@
-package Boxes;
+package org.example.Boxes;
 
 public class Box {
     public double width;
