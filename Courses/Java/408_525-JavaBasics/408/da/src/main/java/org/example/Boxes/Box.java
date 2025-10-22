@@ -1,9 +1,20 @@
 package org.example.Boxes;
 
 public class Box {
-    public double width;
-    public double height;
-    public double depth;
+    private double width;
+    private double height;
+    private double depth;
+
+
+    public Box(){ // inits all to 0;
+    }
+
+    public Box(double width, double height, double depth) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+    }
+
 
     public double getWidth() {
         return width;
@@ -29,16 +40,6 @@ public class Box {
         this.depth = depth;
     }
 
-    public Box(double width, double height, double depth) {
-        this.width = width;
-        this.height = height;
-        this.depth = depth;
-    }
-    public Box(){
-        this.width = 0;
-        this.height = 0;
-        this.depth = 0;
-    }
 
     @Override
     public String toString() {

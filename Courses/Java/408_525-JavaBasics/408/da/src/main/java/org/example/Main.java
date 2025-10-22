@@ -1,11 +1,18 @@
 package org.example;
 
-import org.example.figures.Figure;
-import org.example.figures.Rectangle;
-import org.example.figures.Triangle;
-import org.example.repo.*;
 
-import java.lang.ref.Cleaner;
+// oldest_to_newest ( briefly )
+import org.example.Boxes.*;
+import org.example.Videos.*;
+import org.example.Vehicles.*;
+import org.example.goods.Vehicle;
+import org.example.recordables.*;
+
+import org.example.figures.*;
+import org.example.repo.*;
+import org.example.goods.*;
+import org.example.Providers.*;
+
 
 
 public class Main {
@@ -13,6 +20,9 @@ public class Main {
     public static void main(String[] args){
 
         System.out.println("===== THIS IS MAIN =====");
+
+        // Note: Some examples in main are skipped
+
 
         // Scope #1 (repo)
         {
@@ -35,15 +45,12 @@ public class Main {
             Repository repository = new Repository(10);
             System.out.println(repository);
 
-            System.out.println();
-
 
             Novel novel = new Novel("asdf", author);
             System.out.println(novel);
 
         }
-
-
+        System.out.println();
 
         // Scope #2 (figures)
         {
@@ -56,7 +63,7 @@ public class Main {
 
             Figure figure;
             Triangle triangle = new Triangle(10, 6);
-            System.out.println(triangle);;
+            System.out.println(triangle);
             System.out.println(triangle.area());
 
             Rectangle rectangle = new Rectangle(4, 5);
@@ -78,8 +85,57 @@ public class Main {
 
 
             figure = triangle; // this.area()  [triangle::area];
-            System.out.printf("\nTotal area: %.2f", figure.totalArea(rectangle)); // else -> [rectangle::area]
+            System.out.printf("Total area: %.2f\n", figure.totalArea(rectangle)); // else -> [rectangle::area]
         }
+        System.out.println();
+
+        // Scope #3 (goods)
+        {
+            ItemForSale itemForSale;
+            Goods goods;
+
+            org.example.goods.Vehicle vehicle = new Vehicle(10, 3000, 2000); // not org.example.Vehicles.*; ...
+            System.out.println(vehicle);
+
+            System.out.println(vehicle.productionPrice());  // 5000.0
+            System.out.println(vehicle.sellingPrice());     // 5500.0
+
+
+            itemForSale = vehicle; // (virtual) Base* -> &derived (C++)
+            System.out.println(itemForSale.productionPrice());
+            System.out.println(itemForSale.sellingPrice());
+
+
+        }
+        System.out.println();
+
+
+        // Scope #4 (providers)
+        {
+            Provider provider;
+            RegisteredProvider registeredProvider;
+
+
+
+            Engineer engineer = new Engineer(200, 40);
+            System.out.println(engineer);
+
+
+
+            TaxiDriver taxiDriver = new TaxiDriver("20120120", 500, 3);
+            System.out.println(taxiDriver);
+
+
+
+
+
+
+        }
+
+
+        System.out.println();
+
+
 
 
     }

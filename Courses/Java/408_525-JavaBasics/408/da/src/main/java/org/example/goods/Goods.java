@@ -6,6 +6,9 @@ public abstract class Goods implements ItemForSale{
     // надценка 5 %
     // крайна цена 105
 
+
+    // Хубаво е, когато работим с пари да ползваме BigDecimal (BigD) ;)
+
     public Goods(double overcharge) {
         this.overcharge = overcharge;
     }
@@ -25,10 +28,17 @@ public abstract class Goods implements ItemForSale{
                 '}';
     }
 
-    // public abstract double productionPrice(); - default by the interface
+    // public abstract double productionPrice(); - остава default наследен от интерфейса; затова и 'goods' e abstract;
 
     @Override
     public double sellingPrice() {
         return this.productionPrice() + this.productionPrice() * this.getOvercharge() / 100;
+    }
+
+    @Override
+    public double profit(){
+        // Със .super. достъпва instance методи на интерфейса
+        // Interface.super.<method>
+        return ItemForSale.super.profit() + 100; // просто илюстративно
     }
 }

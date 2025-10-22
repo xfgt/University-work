@@ -2,24 +2,23 @@ package org.example.goods;
 
 public class Vehicle extends Goods{
 
-    private double materialCost;
+    private double materialsCost;
     private double salariesCost;
 
-    public Vehicle(double overcharge, double materialCost, double salariesCost) {
+    public Vehicle(double overcharge, double materialsCost, double salariesCost) {
         super(overcharge);
-        this.materialCost = materialCost;
+        this.materialsCost = materialsCost;
         this.salariesCost = salariesCost;
     }
 
-    public double getMaterialCost() {
-        return materialCost;
+    public double getMaterialsCost() {
+        return materialsCost;
     }
 
-
-
-    public void setMaterialCost(double materialCost) {
-        this.materialCost = materialCost;
+    public void setMaterialsCost(double materialsCost) {
+        this.materialsCost = materialsCost;
     }
+
 
     public double getSalariesCost() {
         return salariesCost;
@@ -30,7 +29,15 @@ public class Vehicle extends Goods{
     }
 
     @Override
+    public String toString() {
+        return "Vehicle{" +
+                "materialsCost=" + materialsCost +
+                ", salariesCost=" + salariesCost +
+                "} " + super.toString();
+    }
+
+    @Override
     public double productionPrice() {
-        return this.getMaterialCost() + this.getSalariesCost();
+        return this.getMaterialsCost() + this.getSalariesCost();
     }
 }
