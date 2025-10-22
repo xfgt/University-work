@@ -1,5 +1,7 @@
 package org.example.figures;
 
+import java.sql.SQLOutput;
+
 public interface AreaCalculations {
     double area(); // implicit (by default is public)
 
@@ -28,6 +30,7 @@ public interface AreaCalculations {
      */
 
     static double testStaticReturnHundred() { // implicit public
+        System.out.println("AreaCalculations.class");
         return 100;
     }
 

@@ -50,6 +50,17 @@ public abstract class Figure implements AreaCalculations { // to have abstract m
 //        return this.area() + figure2.area();
 //    }
 
+    @Override
+    public double totalArea(Figure figure){
+        AreaCalculations.testStaticReturnHundred();
+
+        // Викаме инстанционен метод със "super" (винаги)
+        // super дава прекия базов клас
+        // това е поради евентуално implements да е за повече от един инерфейси
+        // Задай си въпроса: "  Кой super точно е!?" (... implements AreaCalculations, Cloneable, ...)
+
+        return AreaCalculations.super.totalArea(figure); // Като в SQL: <DB_Name.Table>; в случая <Interface.super.method>
+    }
 
 
 }
