@@ -28,6 +28,7 @@
 
 #include <iostream>
 using namespace std;
+// myfunc is an alias to -> double (*)(double, unsigned); that's it!
 typedef double (*myfunc)(double, unsigned);
 
 /*
