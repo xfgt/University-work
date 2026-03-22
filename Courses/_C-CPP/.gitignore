@@ -1,6 +1,5 @@
 .vscode/
+.vs/
 .idea/
-cmake-build-debug/
-CMakeLists.txt
+out/
 
-SoftUni 2024\*
